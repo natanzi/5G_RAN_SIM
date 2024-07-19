@@ -46,12 +46,10 @@ def initialize_network(base_dir, num_ues_to_launch=None):
     assert cells is not None, "Cells initialization failed or returned None."
     #print(f"Cells initialized: {cells}")
 
-    sector_manager = SectorManager.get_instance(db_manager)
+    sector_manager = SectorManager.get_instance(db_manager) 
     sectors = sector_manager.initialize_sectors(config.sectors_config, gnodeb_manager, cell_manager)
-
     if num_ues_to_launch:
         ue_manager = UEManager.get_instance(base_dir=base_dir)
-
         ues = ue_manager.initialize_ues(num_ues_to_launch, cells, gNodeBs, config.ue_config)
         print("Initialized UEs:")
         for ue in ues:

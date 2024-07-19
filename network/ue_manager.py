@@ -22,28 +22,44 @@ class UEManager:
     _instance = None
     _lock = threading.Lock()
 
-    def __new__(cls):
-        with cls._lock:
-            if cls._instance is None:
-                cls._instance = super(UEManager, cls).__new__(cls)
+    def __new__(cls, *args, **kwargs):
+        if not cls._instance:
+            cls._instance = super(UEManager, cls).__new__(cls)
         return cls._instance
-    
-    def __init__(self):
-        if not hasattr(self, 'initialized'):  # Ensures __init__ is only called once
-            self.ues = {}  # Dictionary initialization
+
+    def __init__(self, base_dir):
+        if not hasattr(self, 'initialized'):  # This ensures __init__ is only called once
+            self.config = Config(base_dir)
+            self.ue_config = self.config.ue_config
+            self.ues = {}  # Ensure this is a dictionary
             self.initialized = True
 
     @classmethod
-    def get_instance(cls, base_dir=None):
-        with cls._lock:
-            if cls._instance is None:
-                cls._instance = UEManager()
-                cls._instance.initialize(base_dir)
-            elif base_dir and cls._instance.base_dir != base_dir:
-                # Only re-initialize if base_dir is different from the current one
-                # and if you really need to support changing the base_dir after instantiation.
-                cls._instance.initialize(base_dir)
+    def get_instance(cls, base_dir):
+        if not cls._instance:
+            cls._instance = UEManager(base_dir)
         return cls._instance
+
+
+
+    # @classmethod
+    # def get_instance(cls, base_dir=None):
+    #     with cls._lock:
+    #         if cls._instance is None:
+    #             cls._instance = UEManager(base_dir)
+    #             # cls._instance.initialize(base_dir)
+    #         elif base_dir and cls._instance.base_dir != base_dir: Probably this is for updating the config file (I don't this is the solution!)
+    #             # Only re-initialize if base_dir is different from the current one
+    #             # and if you really need to support changing the base_dir after instantiation.
+    #             cls._instance.initialize(base_dir)
+    #     return cls._instance
+    
+
+    # @classmethod
+    # def get_instance(cls, base_dir):
+    #     if not cls._instance:
+    #         cls._instance = UEManager(base_dir)
+    #     return cls._instance
     
     def initialize(self, base_dir=None):
         if base_dir and not hasattr(self, 'base_dir'):

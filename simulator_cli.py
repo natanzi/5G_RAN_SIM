@@ -529,7 +529,7 @@ class SimulatorCLI(cmd.Cmd):
                 ('ue_list', 'List all UEs (User Equipments) in the network.'),
                 ('ue_log', 'Display UE traffic logs.'),
                 ('ue_specs', 'Display UE specifications of ue in the network.'),
-                ('del_ue', 'delete ue from sector and database'),
+                ('del_ue', 'Delete ue from sector and database'),
                 ('add_ue', 'add new ue based on current config file to the specific sector'),
                 ('kpis', 'Display KPIs for the network.'),
                 ('loadbalancing', 'Display load balancing information for the network.'),
