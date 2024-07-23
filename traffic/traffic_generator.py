@@ -430,28 +430,51 @@ class TrafficController:
 ############################################################################################
     def stop_ue_traffic(self, ue):
         """Stops traffic generation for the given UE"""
-        traffic_update_logger.info(f"Stopping traffic for UE: {ue}")
-        traffic_update_logger.info(f"UE ID: {ue.ID}")
-        traffic_update_logger.info(f"UE generating traffic: {ue.generating_traffic}")
-        
+        if not isinstance(ue, UE):
+            traffic_update_logger.error(f"Invalid UE object provided: {ue}")
+            return False
+
+        traffic_update_logger.info(f"Attempting to stop traffic for UE: {ue.ID}")
+        traffic_update_logger.debug(f"Current traffic generation status: {ue.generating_traffic}")
+
         try:
-            if ue.ID in self.ues and ue.generating_traffic:
-                with self._lock:  # Ensure thread-safe access to ue.generating_traffic
-                    ue.generating_traffic = False
-                    ue.throughput = 0
+            if ue.ID in self.ues:
+                with self._lock:  # Ensure thread-safe access to UE attributes
+                    if ue.generating_traffic:
+                        ue.generating_traffic = False
+                        ue.throughput = 0
+                        traffic_update_logger.info(f"Traffic generation stopped for UE {ue.ID}")
+                    else:
+                        traffic_update_logger.info(f"UE {ue.ID} was not generating traffic")
 
                 try:
-                    # Additional cleanup (if needed)
-                    pass  # Replace this with your actual cleanup logic
-                except Exception as e:
-                    traffic_update_logger.error(f"Error during cleanup for UE {ue.ID}: {e}")
+                    # Additional cleanup logic
+                    self._perform_additional_cleanup(ue)
+                except Exception as cleanup_error:
+                    traffic_update_logger.error(f"Error during cleanup for UE {ue.ID}: {cleanup_error}")
+                
+                return True
+            else:
+                traffic_update_logger.warning(f"UE {ue.ID} not found in the traffic controller")
+                return False
 
-                traffic_update_logger.info(f"Traffic stopped for {ue.ID}")
-                self.remove_ue(ue.ID)
         except Exception as e:
-            traffic_update_logger.error(f"Error while stopping traffic for UE {ue.ID}: {str(e)}")
-            # You can also re-raise the exception if needed
-            raise
+            traffic_update_logger.error(f"Unexpected error while stopping traffic for UE {ue.ID}: {str(e)}")
+            return False
+
+        finally:
+            if ue.ID in self.ues:
+                self.remove_ue(ue.ID)
+                traffic_update_logger.info(f"UE {ue.ID} removed from traffic controller")
+
+    def _perform_additional_cleanup(self, ue):
+        """Perform any additional cleanup tasks for the UE"""
+        # Add your specific cleanup logic here
+        # For example:
+        # - Clear any queued packets
+        # - Reset any UE-specific traffic parameters
+        # - Update any related network components
+        pass
 
 #########################################################################################################################
     # Note:Throughput measures the rate at which data is successfully transmitted over the network,typically expressed  #
