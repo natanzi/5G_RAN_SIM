@@ -224,3 +224,9 @@ class UE:
                 ue_logger.info(f"Updated {key} for UE {self.ID} to {value}")
             else:
                 ue_logger.warning(f"Attempted to update non-existent attribute {key} for UE {self.ID}")
+                
+    def start_traffic(self):
+        self.generating_traffic = True
+
+    def stop_traffic(self):
+        self.generating_traffic = False
