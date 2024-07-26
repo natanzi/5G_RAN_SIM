@@ -237,7 +237,7 @@ def set_traffic():
         API_logger.error("No JSON data received in the request")
         return jsonify({'error': 'No data provided'}), 400
 
-    required_fields = ['ue_id', 'traffic_type', 'traffic_factor']
+    required_fields = ['ue_id', 'traffic_factor']
     for field in required_fields:
         if field not in data:
             API_logger.error(f"Missing required field: {field}")
@@ -245,13 +245,12 @@ def set_traffic():
 
     try:
         command_result, message = CommandHandler.handle_command('set_custom_traffic', data)
-        if command_result:
+        if command_result:  
             API_logger.info(f"Successfully set custom traffic for UE {data['ue_id']}")
             return jsonify({
                 'success': True,
                 'message': message,
                 'ue_id': data['ue_id'],
-                'traffic_type': data['traffic_type'],
                 'traffic_factor': data['traffic_factor']
             }), 200
         else:

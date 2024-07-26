@@ -200,20 +200,19 @@ class CommandHandler:
             API_logger.error(f"An error occurred while updating UE {ue_id}: {str(e)}")
 #########################################################################################################
     @staticmethod
-    def _set_custom_traffic(data):  
+    def _set_custom_traffic(data):
         ue_id = data['ue_id']
-        factor = data['factor']
-    
-    # TrafficController has a method to set custom traffic
+        traffic_factor = data['traffic_factor']
+
         traffic_controller = TrafficController.get_instance()
-        result = traffic_controller.set_custom_traffic(ue_id, factor)
-    
-        if result:
-            API_logger.info(f"Custom traffic set for UE {ue_id}.")
-            return jsonify({'message': f"Custom traffic set for UE {ue_id}."}), 200
+        result = traffic_controller.set_custom_traffic(ue_id, traffic_factor)
+
+        if result is not None:
+            API_logger.info(f"Custom traffic set for UE {ue_id}. New traffic factor: {result}")
+            return True, f"Custom traffic set for UE {ue_id}. New traffic factor: {result}"
         else:
             API_logger.error(f"Failed to set custom traffic for UE {ue_id}.")
-            return jsonify({'error': f"Failed to set custom traffic for UE {ue_id}."}), 500
+            return False, f"Failed to set custom traffic for UE {ue_id}."
 #########################################################################################################
     @staticmethod
     def _flush_all_data(data=None):  # Make data optional
