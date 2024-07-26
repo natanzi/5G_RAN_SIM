@@ -612,3 +612,24 @@ class TrafficController:
             'interval': interval
         }
 ############################################################################################
+    def toggle_ue_traffic(self, ue_or_id):
+        """Toggles the traffic generation state for the given UE"""
+        if isinstance(ue_or_id, int):
+            ue = self.ues.get(ue_or_id)
+            if not ue:
+                traffic_update_logger.warning(f"UE with ID {ue_or_id} not found in connected UEs.")
+                return False
+        else:
+            ue = ue_or_id
+
+        if not isinstance(ue, UE):
+            traffic_update_logger.error(f"Invalid UE object provided: {ue}")
+            return False
+
+        with self._lock:
+            if ue.generating_traffic:
+                return self.stop_ue_traffic(ue)
+            else:
+                return self.start_ue_traffic(ue)
+
+############################################################################################
