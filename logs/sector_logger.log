@@ -33,3 +33,8 @@
 {"level": "INFO", "timestamp": "2024-07-22 19:39:44", "message": "UE with ID ue3 has been added to the sector Ax1242-A3. Current UE Load count: 1", "test_id": "38ccefd3-f204-46fe-b511-6e9c9c91c540"}
 {"level": "INFO", "timestamp": "2024-07-22 19:39:44", "message": "UE with ID ue4 has been added to the sector BX1453-B1. Current UE Load count: 1", "test_id": "38ccefd3-f204-46fe-b511-6e9c9c91c540"}
 {"level": "INFO", "timestamp": "2024-07-22 19:39:44", "message": "UE with ID ue5 has been added to the sector BX1453-B2. Current UE Load count: 1", "test_id": "38ccefd3-f204-46fe-b511-6e9c9c91c540"}
+{"level": "INFO", "timestamp": "2024-07-26 12:41:10", "message": "UE with ID ue1 has been added to the sector Ax1242-A1. Current UE Load count: 1", "test_id": "2a50d0f5-6588-42be-a93e-2a8bb937dbb9"}
+{"level": "INFO", "timestamp": "2024-07-26 12:41:10", "message": "UE with ID ue2 has been added to the sector Ax1242-A2. Current UE Load count: 1", "test_id": "2a50d0f5-6588-42be-a93e-2a8bb937dbb9"}
+{"level": "INFO", "timestamp": "2024-07-26 12:41:10", "message": "UE with ID ue3 has been added to the sector Ax1242-A3. Current UE Load count: 1", "test_id": "2a50d0f5-6588-42be-a93e-2a8bb937dbb9"}
+{"level": "INFO", "timestamp": "2024-07-26 12:41:10", "message": "UE with ID ue4 has been added to the sector BX1453-B1. Current UE Load count: 1", "test_id": "2a50d0f5-6588-42be-a93e-2a8bb937dbb9"}
+{"level": "INFO", "timestamp": "2024-07-26 12:41:10", "message": "UE with ID ue5 has been added to the sector BX1453-B2. Current UE Load count: 1", "test_id": "2a50d0f5-6588-42be-a93e-2a8bb937dbb9"}

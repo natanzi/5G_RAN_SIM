@@ -313,3 +313,25 @@ def get_ues():
 # else:
         #return jsonify({'error': 'Failed to move UE'}), 500
 ###########################################################################################################
+@app.route('/set_handover_algorithm', methods=['POST'])
+def set_handover_algorithm():
+    data = request.json
+    algorithm_name = data.get('algorithm')
+    if algorithm_name == 'rssi':
+        LoadBalancer.get_instance().set_handover_algorithm(RSSIBasedHandover())
+    elif algorithm_name == 'load_balancing':
+        LoadBalancer.get_instance().set_handover_algorithm(LoadBalancingHandover())
+    # Add more algorithms as needed
+    return jsonify({'message': f'Handover algorithm set to {algorithm_name}'}), 200
+
+@app.route('/set_mobility_model', methods=['POST'])
+def set_mobility_model():
+    data = request.json
+    model_name = data.get('model')
+    if model_name == 'random_walk':
+        LoadBalancer.get_instance().set_mobility_model(RandomWalkModel())
+    elif model_name == 'linear':
+        direction = data.get('direction', 0)
+        LoadBalancer.get_instance().set_mobility_model(LinearModel(direction))
+    # Add more models as needed
+    return jsonify({'message': f'Mobility model set to {model_name}'}), 200
