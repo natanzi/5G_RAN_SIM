@@ -231,12 +231,35 @@ def sector_load():
 @app.route('/set_traffic', methods=['POST'])
 def set_traffic():
     data = request.json
-    command_result, message = CommandHandler.handle_command('set_custom_traffic', data)
-    if command_result:
-        return jsonify({'message': message}), 200
-    else:
-        API_logger.error(f"Failed to set custom traffic: {message}")
-        return jsonify({'error': message}), 500
+    API_logger.info(f"Received request to set custom traffic: {data}")
+
+    if not data:
+        API_logger.error("No JSON data received in the request")
+        return jsonify({'error': 'No data provided'}), 400
+
+    required_fields = ['ue_id', 'traffic_type', 'traffic_factor']
+    for field in required_fields:
+        if field not in data:
+            API_logger.error(f"Missing required field: {field}")
+            return jsonify({'error': f"Missing required field: {field}"}), 400
+
+    try:
+        command_result, message = CommandHandler.handle_command('set_custom_traffic', data)
+        if command_result:
+            API_logger.info(f"Successfully set custom traffic for UE {data['ue_id']}")
+            return jsonify({
+                'success': True,
+                'message': message,
+                'ue_id': data['ue_id'],
+                'traffic_type': data['traffic_type'],
+                'traffic_factor': data['traffic_factor']
+            }), 200
+        else:
+            API_logger.error(f"Failed to set custom traffic: {message}")
+            return jsonify({'error': message}), 400
+    except Exception as e:
+        API_logger.error(f"An error occurred while setting custom traffic: {str(e)}")
+        return jsonify({'error': 'An internal error occurred', 'details': str(e)}), 500
 #########################################################################################################
 # This is an API for delete all information inside the databse.
 @app.route('/flush_database', methods=['POST'])
