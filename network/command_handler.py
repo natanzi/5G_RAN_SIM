@@ -203,6 +203,7 @@ class CommandHandler:
     def _set_custom_traffic(data):
         ue_id = data['ue_id']
         traffic_factor = data['traffic_factor']
+        API_logger.info(f"Setting custom traffic for UE {ue_id} with factor {traffic_factor}")
 
         traffic_controller = TrafficController.get_instance()
         result = traffic_controller.set_custom_traffic(ue_id, traffic_factor)

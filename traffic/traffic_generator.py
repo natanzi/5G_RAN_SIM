@@ -517,35 +517,24 @@ class TrafficController:
     # This metric is vital for assessing network load, data consumption patterns, and for planning network capacity.    #
 #########################################################################################################################
     def set_custom_traffic(self, ue_id, traffic_factor):
-        """
-        Set or adjust custom traffic for a specific UE.
-        
-        :param ue_id: The ID of the UE to adjust
-        :param traffic_factor: The new traffic factor or adjustment value
-        :return: The updated traffic factor or None if the operation failed
-        """
         try:
             ue = self.ue_manager.get_ue_by_id(ue_id)
             if not ue:
                 ue_logger.warning(f"UE with ID {ue_id} not found.")
                 return None
 
-            # Check if we're adjusting or setting a new value
+            ue_logger.info(f"Setting traffic factor for UE {ue_id} to {traffic_factor}")
             if isinstance(traffic_factor, float) and traffic_factor > 0:
                 if traffic_factor != 1.0:
-                    # Adjust the existing traffic factor
                     ue.traffic_factor *= traffic_factor
                     ue_logger.info(f"Adjusted traffic factor for UE {ue_id} by {traffic_factor}. New factor: {ue.traffic_factor}")
                 else:
                     ue_logger.info(f"Traffic factor for UE {ue_id} remains unchanged at {ue.traffic_factor}")
             else:
-                # Set a new traffic factor
                 ue.traffic_factor = traffic_factor
                 ue_logger.info(f"Set new traffic factor for UE {ue_id}: {traffic_factor}")
 
-            # Update the UE's traffic model
             self.update_ue_traffic_model(ue)
-
             return ue.traffic_factor
 
         except Exception as e:
@@ -553,16 +542,9 @@ class TrafficController:
             return None
 
     def update_ue_traffic_model(self, ue):
-        """
-        Update the UE's traffic model based on the new traffic factor.
-        """
         try:
-            # Generate new traffic data based on the updated traffic factor
             new_traffic_data = self.generate_traffic(ue)
-            
-            # Update the UE's traffic model
             ue.update_traffic_model(new_traffic_data)
-            
             ue_logger.info(f"Updated traffic model for UE {ue.ID} with new parameters: {new_traffic_data}")
         except Exception as e:
             ue_logger.error(f"Error updating traffic model for UE {ue.ID}: {str(e)}")
