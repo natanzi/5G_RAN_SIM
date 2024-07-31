@@ -37,6 +37,8 @@ class CommandHandler:
             return CommandHandler._set_custom_traffic(data)
         elif command_type == 'flush_all_data':
             return CommandHandler._flush_all_data(data)
+        elif command_type == 'get_ue_info':
+            return CommandHandler._get_ue_info(data)
         else:
             raise ValueError("Unsupported command type")
 
@@ -228,4 +230,14 @@ class CommandHandler:
         except Exception as e:
             API_logger.error(f"An error occurred while flushing the database: {str(e)}")
             return False, f"An error occurred while flushing the database: {str(e)}"
+#########################################################################################################
+    @staticmethod
+    def _get_ue_info(data):
+        ue_id = data['ue_id']
+        ue_manager = UEManager.get_instance()
+        ue = ue_manager.get_ue_by_id(ue_id)
+        if ue:
+            return True, ue.to_dict()
+        else:
+            return False, {'error': f'UE with ID {ue_id} not found'}
 #########################################################################################################

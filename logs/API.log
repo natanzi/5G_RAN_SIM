@@ -5,3 +5,13 @@
 {"level": "ERROR", "timestamp": "2024-07-31 15:09:42", "message": "An error occurred while updating UE: cannot unpack non-iterable NoneType object", "test_id": "db14c173-df09-41b0-bb4d-eef6cb73fa41"}
 {"level": "ERROR", "timestamp": "2024-07-31 15:37:35", "message": "An error occurred while updating UE ue4: type object 'UE' has no attribute 'ues'", "test_id": "1c2a5472-1806-44c8-aed6-4031f41ebf8d"}
 {"level": "ERROR", "timestamp": "2024-07-31 15:37:35", "message": "An error occurred while updating UE: cannot unpack non-iterable NoneType object", "test_id": "1c2a5472-1806-44c8-aed6-4031f41ebf8d"}
+{"level": "INFO", "timestamp": "2024-07-31 16:24:54", "message": "Received request to set custom traffic: {'ue_id': 'ue1', 'traffic_factor': 1.5}", "test_id": "d239593a-2ec2-479a-9e69-7a3ca81641d6"}
+{"level": "INFO", "timestamp": "2024-07-31 16:24:54", "message": "Calling CommandHandler.handle_command with 'set_custom_traffic' and data: {'ue_id': 'ue1', 'traffic_factor': 1.5}", "test_id": "d239593a-2ec2-479a-9e69-7a3ca81641d6"}
+{"level": "ERROR", "timestamp": "2024-07-31 16:24:54", "message": "Failed to set custom traffic for UE ue1.", "test_id": "d239593a-2ec2-479a-9e69-7a3ca81641d6"}
+{"level": "INFO", "timestamp": "2024-07-31 16:24:54", "message": "CommandHandler result: False, message: Failed to set custom traffic for UE ue1.", "test_id": "d239593a-2ec2-479a-9e69-7a3ca81641d6"}
+{"level": "ERROR", "timestamp": "2024-07-31 16:24:54", "message": "Failed to set custom traffic: Failed to set custom traffic for UE ue1.", "test_id": "d239593a-2ec2-479a-9e69-7a3ca81641d6"}
+{"level": "INFO", "timestamp": "2024-07-31 16:24:54", "message": "Received request to set custom traffic: {'ue_id': 'ue1', 'traffic_factor': 1.5}", "test_id": "d239593a-2ec2-479a-9e69-7a3ca81641d6"}
+{"level": "INFO", "timestamp": "2024-07-31 16:24:54", "message": "Calling CommandHandler.handle_command with 'set_custom_traffic' and data: {'ue_id': 'ue1', 'traffic_factor': 1.5}", "test_id": "d239593a-2ec2-479a-9e69-7a3ca81641d6"}
+{"level": "ERROR", "timestamp": "2024-07-31 16:24:54", "message": "Failed to set custom traffic for UE ue1.", "test_id": "d239593a-2ec2-479a-9e69-7a3ca81641d6"}
+{"level": "INFO", "timestamp": "2024-07-31 16:24:54", "message": "CommandHandler result: False, message: Failed to set custom traffic for UE ue1.", "test_id": "d239593a-2ec2-479a-9e69-7a3ca81641d6"}
+{"level": "ERROR", "timestamp": "2024-07-31 16:24:54", "message": "Failed to set custom traffic: Failed to set custom traffic for UE ue1.", "test_id": "d239593a-2ec2-479a-9e69-7a3ca81641d6"}

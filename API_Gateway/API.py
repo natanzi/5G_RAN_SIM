@@ -326,7 +326,7 @@ def set_handover_algorithm():
         LoadBalancer.get_instance().set_handover_algorithm(LoadBalancingHandover())
     # Add more algorithms as needed
     return jsonify({'message': f'Handover algorithm set to {algorithm_name}'}), 200
-
+###########################################################################################################
 @app.route('/set_mobility_model', methods=['POST'])
 def set_mobility_model():
     data = request.json
@@ -338,3 +338,20 @@ def set_mobility_model():
         LoadBalancer.get_instance().set_mobility_model(LinearModel(direction))
     # Add more models as needed
     return jsonify({'message': f'Mobility model set to {model_name}'}), 200
+###########################################################################################################
+@app.route('/get_ue_info', methods=['GET'])
+def get_ue_info():
+    ue_id = request.args.get('ue_id')
+    if not ue_id:
+        return jsonify({'error': "Missing 'ue_id' parameter"}), 400
+
+    try:
+        success, result = CommandHandler.handle_command('get_ue_info', {'ue_id': ue_id})
+        if success:
+            return jsonify(result), 200
+        else:
+            return jsonify(result), 404
+    except Exception as e:
+        API_logger.error(f"An error occurred while retrieving UE info: {str(e)}")
+        return jsonify({'error': 'An internal error occurred'}), 500
+###########################################################################################################
