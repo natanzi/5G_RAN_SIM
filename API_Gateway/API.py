@@ -9,7 +9,8 @@ import sys
 from multiprocessing import Queue
 import threading
 import time
-
+from logs.logger_config import API_logger
+from network.ue_manager import UEManager
 # Build the path to the .env file in the root directory of your project
 dotenv_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
 
@@ -18,7 +19,6 @@ load_dotenv(dotenv_path)
 #print(dotenv_path)
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) 
 from network.command_handler import CommandHandler
-from logs.logger_config import API_logger
 import traceback
 from flask import Flask, request, jsonify, Response
 import logging
@@ -339,19 +339,15 @@ def set_mobility_model():
     # Add more models as needed
     return jsonify({'message': f'Mobility model set to {model_name}'}), 200
 ###########################################################################################################
-@app.route('/get_ue_info', methods=['GET'])
+@app.route('/api/get_ue_info', methods=['GET'])
 def get_ue_info():
     ue_id = request.args.get('ue_id')
     if not ue_id:
-        return jsonify({'error': "Missing 'ue_id' parameter"}), 400
+        return jsonify({'error': 'UE ID is required'}), 400
 
-    try:
-        success, result = CommandHandler.handle_command('get_ue_info', {'ue_id': ue_id})
-        if success:
-            return jsonify(result), 200
-        else:
-            return jsonify(result), 404
-    except Exception as e:
-        API_logger.error(f"An error occurred while retrieving UE info: {str(e)}")
-        return jsonify({'error': 'An internal error occurred'}), 500
+    result, ue_info = CommandHandler.handle_command('get_ue_info', {'ue_id': ue_id})
+    if result:
+        return jsonify(ue_info), 200
+    else:
+        return jsonify(ue_info), 404
 ###########################################################################################################
