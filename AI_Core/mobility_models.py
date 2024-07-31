@@ -1,5 +1,5 @@
 #################################################################################################################################
-# mobility_models.py is located in the ai_core folder in the root directory of RANfusion.                                       #
+# mobility_models.py is located in the AI_Core folder in the root directory of RANfusion.                                       #
 # This file contains various Mobility Models that simulate the movement patterns of User Equipment (UE) in the network.         #
 # These models work in conjunction with the Handover Algorithms to create realistic scenarios for testing and optimization.     #
 #                                                                                                                               #
@@ -12,14 +12,14 @@
 # The mobility models in this file complement the handover algorithms by providing realistic UE movement simulations.           #
 # This allows for more accurate testing and optimization of handover processes in different network conditions.                 #
 #                                                                                                                               #
-# Note: While this file is part of the AI Core component, it works closely with the mobility management functionality           #
+# Note: While this file is part of the AI_Core component, it works closely with the mobility management functionality           #
 # implemented in /O-CU/mobility_management.py, which handles tasks such as tracking area updates, handovers, and                #
 # UE context management during mobility.                                                                                        #
 #                                                                                                                               #
 # The combination of mobility models and handover algorithms enables comprehensive simulation and analysis of network           #
 # performance, with results that can be visualized in the InfluxDB dashboard.                                                   #
 #################################################################################################################################
-# ai_core/mobility_models.py
+# AI_Core/mobility_models.py
 
 from ai_core.handover_algorithms import RSSIBasedHandover, LoadBalancingHandover
 from ai_core.mobility_models import RandomWalkModel, LinearModel
