@@ -1,2 +1,3 @@
 {"level": "INFO", "timestamp": "2024-07-31 17:10:34", "message": "gNodeB 'W1140' has been launched with 3 cells at '2024-07-31 17:10:38'.", "test_id": "ee7eb884-38d3-462c-a60c-d27ac7427cd7"}
 {"level": "INFO", "timestamp": "2024-07-31 17:10:34", "message": "gNodeB 'W1320' has been launched with 3 cells at '2024-07-31 17:10:39'.", "test_id": "ee7eb884-38d3-462c-a60c-d27ac7427cd7"}
+{"level": "INFO", "timestamp": "2024-07-31 17:10:34", "message": "gNodeB 'W2018' has been launched with 3 cells at '2024-07-31 17:10:40'.", "test_id": "ee7eb884-38d3-462c-a60c-d27ac7427cd7"}
