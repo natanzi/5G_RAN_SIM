@@ -87,12 +87,12 @@ class UEManager:
         return new_ue
 
     def get_ue_by_id(self, ue_id):
-        ue_id_str = str(ue_id)  # Convert ue_id to string
+        ue_id_str = str(ue_id).strip().lower()  # Normalize ue_id to lowercase
         ue_logger.info(f"Looking for UE with ID: {ue_id_str}")
         ue_logger.info(f"Contents of ues dictionary: {self.ues}")
         ue = self.ues.get(ue_id_str)  # Use the correct attribute 'ues' to retrieve the UE
         if ue is None:
-            ue_logger.error(f"UE with ID {ue_id} not found.")
+            ue_logger.error(f"UE with ID {ue_id_str} not found.")
         else:
             ue_logger.info(f"Found UE instance: {ue}")
             ue_logger.info(f"UE instance ID: {id(ue)}")  # Log the object ID

@@ -1,0 +1,6 @@
+{"level": "INFO", "timestamp": "2024-07-31 17:51:10", "message": "Attempting to retrieve info for UE with ID: ue1", "test_id": "f0405650-bd35-4989-b517-0d80da4f920a"}
+{"level": "ERROR", "timestamp": "2024-07-31 17:51:10", "message": "An error occurred while retrieving UE info: UEManager.get_instance() missing 1 required positional argument: 'base_dir'", "test_id": "f0405650-bd35-4989-b517-0d80da4f920a"}
+{"level": "INFO", "timestamp": "2024-07-31 17:51:10", "message": "Attempting to retrieve info for UE with ID: 1", "test_id": "f0405650-bd35-4989-b517-0d80da4f920a"}
+{"level": "ERROR", "timestamp": "2024-07-31 17:51:10", "message": "An error occurred while retrieving UE info: UEManager.get_instance() missing 1 required positional argument: 'base_dir'", "test_id": "f0405650-bd35-4989-b517-0d80da4f920a"}
+{"level": "INFO", "timestamp": "2024-07-31 17:51:10", "message": "Attempting to retrieve info for UE with ID: ue1", "test_id": "f0405650-bd35-4989-b517-0d80da4f920a"}
+{"level": "ERROR", "timestamp": "2024-07-31 17:51:10", "message": "An error occurred while retrieving UE info: UEManager.get_instance() missing 1 required positional argument: 'base_dir'", "test_id": "f0405650-bd35-4989-b517-0d80da4f920a"}

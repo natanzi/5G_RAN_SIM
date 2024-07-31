@@ -356,3 +356,14 @@ def get_ue_info():
         API_logger.error(f"An error occurred while retrieving UE info: {e}")
         return jsonify({'error': 'An error occurred while retrieving UE info'}), 500
 ###########################################################################################################
+@app.route('/debug/ues', methods=['GET'])
+def debug_get_all_ues():
+    try:
+        ue_manager = UEManager.get_instance(base_dir)
+        ue_ids = ue_manager.list_all_ues()
+        API_logger.info(f"Retrieved UE IDs: {ue_ids}")
+        return jsonify({'ue_ids': ue_ids}), 200
+    except Exception as e:
+        API_logger.error(f"Failed to retrieve UE IDs: {e}")
+        return jsonify({'error': 'Failed to retrieve UE IDs'}), 500
+###########################################################################################################

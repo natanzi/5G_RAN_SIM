@@ -444,8 +444,6 @@ class TrafficController:
             ue_logger.error(f"Unexpected error while starting traffic for UE {ue.ID}: {str(e)}")
             return False
 
-        except Exception as e:
-            ue_logger.error(f"Unexpected error while starting traffic for UE {ue.ID}: {str(e)}")
         return False
 
     def _perform_additional_setup(self, ue):

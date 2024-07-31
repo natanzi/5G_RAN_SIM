@@ -246,3 +246,17 @@ class CommandHandler:
             API_logger.warning(f"UE with ID {ue_id} not found")
             return False, {'error': f'UE with ID {ue_id} not found'}
 #########################################################################################################
+    @staticmethod
+    def _get_ue_info(data):
+        ue_id = data['ue_id'].strip().lower()  # Normalize the UE ID to lowercase
+        API_logger.info(f"Attempting to retrieve info for UE with ID: {ue_id}")
+        
+        ue_manager = UEManager.get_instance()
+        ue = ue_manager.get_ue_by_id(ue_id)
+        
+        if ue:
+            API_logger.info(f"UE with ID {ue_id} found")
+            return True, ue.__dict__  # Return all attributes of the UE instance
+        else:
+            API_logger.warning(f"UE with ID {ue_id} not found")
+            return False, {'error': f'UE with ID {ue_id} not found'}
