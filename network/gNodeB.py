@@ -1,5 +1,5 @@
 ########################################################################################################################
-# gNodeB class  is located inside network directory and represents a gNodeB in a 5G network. gNodeBs are base stations #
+# gNodeB.py class  is located inside network directory and represents a gNodeB in a 5G network. gNodeBs are base stations #
 # in 5G networks that connect user equipment (UEs) like smartphones and tablets to the network. This class is designed #
 # to simulate the behavior and characteristics of real-world gNodeBs, including managing connections to cells and      #
 # sectors, handling gNodeB-specific configurations, and reporting metrics for network simulation and analysis.         #

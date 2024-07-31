@@ -18,26 +18,11 @@
 # system through its modular design.                                                                                            #
 #################################################################################################################################
 # ai_core/handover_algorithms.py
+# Add more handover algorithms as needed
 
 class HandoverAlgorithm:
     def __init__(self):
-        pass
+        self.handover_algorithm = SimpleLoadBasedHandover()
 
-    def decide_handover(self, ue, current_cell, neighbor_cells):
-        raise NotImplementedError("Subclasses must implement this method")
 
-class RSSIBasedHandover(HandoverAlgorithm):
-    def decide_handover(self, ue, current_cell, neighbor_cells):
-        best_cell = max(neighbor_cells, key=lambda cell: cell.calculate_rssi(ue))
-        if best_cell.calculate_rssi(ue) > current_cell.calculate_rssi(ue):
-            return best_cell
-        return None
 
-class LoadBalancingHandover(HandoverAlgorithm):
-    def decide_handover(self, ue, current_cell, neighbor_cells):
-        least_loaded_cell = min(neighbor_cells, key=lambda cell: cell.get_load())
-        if least_loaded_cell.get_load() < current_cell.get_load() - 10:  # 10% threshold
-            return least_loaded_cell
-        return None
-
-# Add more handover algorithms as needed
