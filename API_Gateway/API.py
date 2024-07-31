@@ -244,7 +244,10 @@ def set_traffic():
             return jsonify({'error': f"Missing required field: {field}"}), 400
 
     try:
+        API_logger.info(f"Calling CommandHandler.handle_command with 'set_custom_traffic' and data: {data}")
         command_result, message = CommandHandler.handle_command('set_custom_traffic', data)
+        API_logger.info(f"CommandHandler result: {command_result}, message: {message}")
+
         if command_result:  
             API_logger.info(f"Successfully set custom traffic for UE {data['ue_id']}")
             return jsonify({
