@@ -236,11 +236,9 @@ class CommandHandler:
         ue_id = data['ue_id']
         API_logger.info(f"Attempting to retrieve info for UE with ID: {ue_id}")
         
-        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        ue_manager = UEManager.get_instance(base_dir)
-        API_logger.debug(f"UEManager instance retrieved")
-        
+        ue_manager = UEManager.get_instance()
         ue = ue_manager.get_ue_by_id(ue_id)
+        
         if ue:
             API_logger.info(f"UE with ID {ue_id} found")
             return True, ue.__dict__  # Return all attributes of the UE instance

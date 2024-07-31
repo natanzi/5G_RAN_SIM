@@ -343,11 +343,16 @@ def set_mobility_model():
 def get_ue_info():
     ue_id = request.args.get('ue_id')
     if not ue_id:
-        return jsonify({'error': 'UE ID is required'}), 400
+        API_logger.error("Missing 'ue_id' in request parameters")
+        return jsonify({'error': "Missing 'ue_id'"}), 400
 
-    result, ue_info = CommandHandler.handle_command('get_ue_info', {'ue_id': ue_id})
-    if result:
-        return jsonify(ue_info), 200
-    else:
-        return jsonify(ue_info), 404
+    try:
+        result, ue_info = CommandHandler.handle_command('get_ue_info', {'ue_id': ue_id})
+        if result:
+            return jsonify(ue_info), 200
+        else:
+            return jsonify({'error': ue_info}), 404
+    except Exception as e:
+        API_logger.error(f"An error occurred while retrieving UE info: {e}")
+        return jsonify({'error': 'An error occurred while retrieving UE info'}), 500
 ###########################################################################################################
