@@ -67,7 +67,7 @@ class CommandHandler:
         else:
             API_logger.error(f"Failed to remove UE {ue_id}.")
             return jsonify({'error': f"Failed to remove UE {ue_id}."}), 500
-    
+        
     @staticmethod
     def _add_ue(data):
         ue_id = data.get("ue_id")

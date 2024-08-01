@@ -41,9 +41,8 @@ class TrafficController:
     def __init__(self):
         if self.__initialized: return
         self.__initialized = True
-        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        self.ue_manager = UEManager.get_instance(base_dir)
-        self.ues = {} # Dictionary to track UEs
+        self.ue_manager = UEManager.get_instance()  # Removed base_dir parameter
+        self.ues = {}  # Dictionary to track UEs
         self.traffic_logs = []
         self.voice_traffic_params = {'bitrate': (8, 16)}  # in Kbps
         self.video_traffic_params = {'num_streams': (1, 5), 'stream_bitrate': (3, 8)}  # in Mbps
@@ -51,7 +50,6 @@ class TrafficController:
         self.iot_traffic_params = {'packet_size': (5, 15), 'interval': (10, 60)}  # packet size in KB, interval in seconds
         self.data_traffic_params = {'bitrate': (10, 100), 'interval': (0.5, 2)}  # in Mbps
         # Initialize jitter, delay, and packet loss for each traffic type
-        #for example (5, 15)  # Jitter range in milliseconds or (10, 50)  # Delay range in milliseconds or (0.01, 0.05)  # Packet loss rate range
         self.ue_voice_jitter = 0
         self.ue_voice_delay = 0
         self.ue_voice_packet_loss_rate = 0
@@ -447,9 +445,7 @@ class TrafficController:
         except Exception as e:
             ue_logger.error(f"Unexpected error while starting traffic for UE {ue.ID}: {str(e)}")
             return False
-
-        return False
-
+    
     def _perform_additional_setup(self, ue):
         """Perform any additional setup required for starting UE traffic"""
         try:
@@ -542,14 +538,6 @@ class TrafficController:
         except Exception as e:
             ue_logger.error(f"Error setting custom traffic for UE {ue_id}: {str(e)}")
             return None
-
-    def update_ue_traffic_model(self, ue):
-        try:
-            new_traffic_data = self.generate_traffic(ue)
-            ue.update_traffic_model(new_traffic_data)
-            ue_logger.info(f"Updated traffic model for UE {ue.ID} with new parameters: {new_traffic_data}")
-        except Exception as e:
-            ue_logger.error(f"Error updating traffic model for UE {ue.ID}: {str(e)}")
 #########################################################################################################################
     def is_ue_generating_traffic(self, ue_id):
         ue = self.ConnectedUEs.get(ue_id)
