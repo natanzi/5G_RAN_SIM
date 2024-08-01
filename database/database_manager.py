@@ -14,6 +14,7 @@ from logs.logger_config import database_logger  # Import the configured logger
 from datetime import datetime
 from influxdb_client import Point
 import json
+import threading
 
 # Read from environment variables or use default values
 INFLUXDB_URL = os.getenv('INFLUXDB_URL', 'http://localhost:8086')
@@ -25,6 +26,8 @@ INFLUXDB_BUCKET = os.getenv('INFLUXDB_BUCKET', 'RAN_metrics')
 
 class DatabaseManager:
     _instance = None
+    _lock = threading.Lock()  # Add a class-level lock
+    _call_count = 0  # Add a class variable to count calls database manager instance
 
     @classmethod
     def get_instance(cls):
