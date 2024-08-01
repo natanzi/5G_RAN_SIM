@@ -40,6 +40,7 @@ def initialize_network(base_dir, num_ues_to_launch=None):
     print(f"gNodeBs initialized: {gNodeBs}")
 
     # Initialize Cells using CellManager
+    print(f"Calling CellManager.get_instance with gNodeBs: {gNodeBs}, db_manager: {db_manager}")
     cell_manager = CellManager.get_instance(gNodeBs, db_manager)
     cells = cell_manager.initialize_cells(config.cells_config)
 

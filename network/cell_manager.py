@@ -24,7 +24,8 @@ class CellManager:
         return cls._instance
 
     @classmethod
-    def get_instance(cls, db_manager=None):
+    def get_instance(cls, gNodeBs=None, db_manager=None):
+        print(f"get_instance called with gNodeBs: {gNodeBs}, db_manager: {db_manager}")
         cls._call_count += 1
         cell_logger.debug(f"CellManager get_instance called {cls._call_count} times.")
         with cls._lock:
@@ -37,7 +38,7 @@ class CellManager:
             print(f"Creating CellManager instance: {self}")
             self.cells = {}
             self.gNodeBs = gNodeBs
-            self.db_manager = DatabaseManager.get_instance()
+            self.db_manager = db_manager  # Use the provided db_manager instance
             self.initialized = True
             
     def initialize_cells(self, cells_config):
