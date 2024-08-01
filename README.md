@@ -58,7 +58,12 @@ Explore RANFusion further in our documentation.(https://RANFusion.com/doc).
 
 ### API Sample
 
-To remove a UE, for example, remove "UE10" from sector "AX1112-A1" :
+To get the list of the all ue:
+```powershell
+Invoke-RestMethod -Uri 'http://localhost:5000/debug/ues' -Method Get -ContentType 'application/json'
+```
+
+To remove a UE, for example, remove "UE10" :
 ```powershell
 Invoke-RestMethod -Uri 'http://localhost:5000/del_ue' -Method Post -ContentType 'application/json' -Body '{"ue_id": "ue10"}'
 ```
