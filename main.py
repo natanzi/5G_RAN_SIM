@@ -22,6 +22,7 @@ from network.network_delay import NetworkDelay
 from simulator_cli import SimulatorCLI
 from threading import Thread
 from API_Gateway import API
+from queue import Empty
 
 def run_api(queue):
     def start_api_server():
@@ -29,17 +30,17 @@ def run_api(queue):
         API.app.run(port=5000, use_reloader=False)
 
     api_server_thread = Thread(target=start_api_server)
-    api_server_thread.daemon = True  # Set the thread as daemon
+    api_server_thread.daemon = True
     api_server_thread.start()
 
     while True:
         try:
-            message = queue.get(timeout=1)  # Add a timeout
+            message = queue.get(timeout=1)
             if message == "SHUTDOWN":
                 print("Shutting down API server...")
                 break
-        except queue.Empty:
-            continue  # Continue the loop if no message is received
+        except Empty:
+            continue
 
     # Implement proper shutdown for Flask (if needed)
     # For example, you might need to call a shutdown function on the API object
