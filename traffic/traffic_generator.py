@@ -20,9 +20,12 @@ from network.sector_manager import SectorManager
 class TrafficController:
     _instance = None
     _lock = threading.Lock()  # Ensure thread-safe singleton access
-    
+    _call_count = 0  # Add a class variable to count calls of the instance
+
     @classmethod
     def get_instance(cls):
+        cls._call_count += 1
+        ue_logger(f"TrafficController get_instance called {cls._call_count} times.")
         with cls._lock:
             if cls._instance is None:
                 ue_logger.debug("Creating a new instance of TrafficController.")

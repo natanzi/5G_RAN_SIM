@@ -21,6 +21,7 @@ ue_config = config.ue_config
 class UEManager:
     _instance = None
     _lock = threading.Lock()
+    _call_count = 0  # Add a class variable to count calls of this isntance
 
     def __new__(cls, *args, **kwargs):
         if not cls._instance:
@@ -36,6 +37,8 @@ class UEManager:
 
     @classmethod
     def get_instance(cls, base_dir):
+        cls._call_count += 1
+        ue_logger.debug(f"UEManager get_instance called {cls._call_count} times.")
         with cls._lock:
             if not cls._instance:
                 ue_logger.debug("Creating a new instance of UEManager.")

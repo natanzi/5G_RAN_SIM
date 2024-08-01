@@ -28,17 +28,16 @@ class DatabaseManager:
 
     @classmethod
     def get_instance(cls):
+        cls._call_count += 1
+        database_logger.debug(f"DatabaseManager get_instance called {cls._call_count} times.")
         if cls._instance is None:
-            cls._instance = cls()
-            # Initialize the instance here if needed, similar to what's done in __new__
-            cls._instance.client_init()
-        return cls._instance
-    
-    def __new__(cls, *args, **kwargs):
-        if not cls._instance:
-            cls._instance = super(DatabaseManager, cls).__new__(cls)
-            # Initialize the instance (the part of __init__)
-            cls._instance.client_init()
+            with cls._lock:
+                if cls._instance is None:
+                    database_logger.debug("Creating a new instance of DatabaseManager.")
+                    cls._instance = cls()
+                    cls._instance.client_init()
+                else:
+                    database_logger.debug("Returning existing instance of DatabaseManager.")
         return cls._instance
 
     def client_init(self):

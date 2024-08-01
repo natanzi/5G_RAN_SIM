@@ -15,6 +15,8 @@ import threading
 
 class SectorManager:
     _instance = None
+    _lock = threading.Lock()
+    _call_count = 0  # Add a class variable to count calls sector manager instance
 
     def __init__(self, db_manager):
         self.sectors = all_sectors  # Use the global all_sectors dictionary to track sectors
@@ -24,8 +26,11 @@ class SectorManager:
     
     @classmethod
     def get_instance(cls, db_manager=None):
-        if cls._instance is None:
-            cls._instance = cls(db_manager)
+        cls._call_count += 1
+        sector_logger.debug(f"SectorManager get_instance called {cls._call_count} times.")
+        with cls._lock:
+            if cls._instance is None:
+                cls._instance = cls(db_manager)
         return cls._instance
     
     def initialize_sectors(self, sectors_config, gnodeb_manager, cell_manager):

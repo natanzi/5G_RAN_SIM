@@ -9,9 +9,12 @@ from network.gNodeB import gNodeB, load_gNodeB_config
 from database.database_manager import DatabaseManager
 from logs.logger_config import cell_logger, gnodeb_logger
 from network.utils import calculate_distance
+import threading
 
 class gNodeBManager:
     _instance = None
+    _lock = threading.Lock()
+    _call_count = 0  # Add a class variable to count calls
 
     def __new__(cls, *args, **kwargs):
         if not cls._instance:
@@ -20,9 +23,12 @@ class gNodeBManager:
         return cls._instance
     
     @classmethod
-    def get_instance(cls, base_dir=None):
-        if cls._instance is None:
-            cls._instance = gNodeBManager(base_dir)
+    def get_instance(cls, db_manager=None):
+        cls._call_count += 1
+        gnodeb_logger.debug(f"gNodeBManager get_instance called {cls._call_count} times.")
+        with cls._lock:
+            if cls._instance is None:
+                cls._instance = cls(db_manager)
         return cls._instance
     
     def __init__(self, base_dir):

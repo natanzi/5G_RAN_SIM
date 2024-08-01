@@ -6,6 +6,7 @@
 #                                                                                                           #
 #############################################################################################################
 import os
+import threading
 # Removed the incorrect import statement
 from logs.logger_config import cell_logger
 import json
@@ -14,6 +15,8 @@ from network.cell import Cell
 
 class CellManager:
     _instance = None
+    _lock = threading.Lock()
+    _call_count = 0  # Add a class variable to count calls
 
     def __new__(cls, *args, **kwargs):
         if cls._instance is None:
@@ -21,9 +24,12 @@ class CellManager:
         return cls._instance
 
     @classmethod
-    def get_instance(cls, gNodeBs=None, db_manager=None):
-        if cls._instance is None:
-            cls._instance = CellManager(gNodeBs, db_manager)
+    def get_instance(cls, db_manager=None):
+        cls._call_count += 1
+        cell_logger.debug(f"CellManager get_instance called {cls._call_count} times.")
+        with cls._lock:
+            if cls._instance is None:
+                cls._instance = cls(db_manager)
         return cls._instance
     
     def __init__(self, gNodeBs, db_manager):
