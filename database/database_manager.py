@@ -26,23 +26,35 @@ INFLUXDB_BUCKET = os.getenv('INFLUXDB_BUCKET', 'RAN_metrics')
 class DatabaseManager:
     _instance = None
     _lock = threading.Lock()  # Add a class-level lock
-
-    @classmethod
-    def get_instance(cls):
+    
+    def __new__(cls):
         if cls._instance is None:
             with cls._lock:
                 if cls._instance is None:
-                    cls._instance = cls()
+                    cls._instance = super(DatabaseManager, cls).__new__(cls)
                     cls._instance.client_init()
         return cls._instance
 
     def client_init(self):
-        # This method replaces the original __init__ content
         self.client = InfluxDBClient(url=INFLUXDB_URL, token=INFLUXDB_TOKEN, org=INFLUXDB_ORG)
         self.write_api = self.client.write_api(write_options=SYNCHRONOUS)
         self.query_api = self.client.query_api()
         self.bucket = INFLUXDB_BUCKET
         self.org = INFLUXDB_ORG
+
+    @classmethod
+    def get_instance(cls):
+        return cls()
+    
+
+    #@classmethod
+    #def get_instance(cls):
+        #if cls._instance is None:
+            #with cls._lock:
+                #if cls._instance is None:
+                #  cls._instance = super(DatabaseManager, cls).__new__(cls)
+                # cls._instance.client_init()
+        #return cls._instance
 
     def get_sector_by_id(self, sector_id):
         query = f'from(bucket: "{self.bucket}") |> range(start: -1d) |> filter(fn: (r) => r._measurement == "sector_metrics" and r.sector_id == "{sector_id}")'
@@ -206,7 +218,7 @@ class DatabaseManager:
         self.write_api.write(bucket=self.bucket, record=point)
 
     def get_ue_metrics(self, ue_id):
-        print(f"Attempting to fetch UE metrics for ue_id: {ue_id}")  # Debug message 1
+        #print(f"Attempting to fetch UE metrics for ue_id: {ue_id}")  # Debug message 1
         query = f'''
             from(bucket: "{self.bucket}")
                 |> range(start: -1d)
@@ -214,16 +226,16 @@ class DatabaseManager:
                 |> pivot(rowKey:["_time"], columnKey: ["_field"], valueColumn: "_value")
         '''
         result = self.query_api.query(query=query)
-        print(f'Result of the query inside the get_ue_metrics for ue_id {ue_id}:', result)  # Debug message 2
+        #print(f'Result of the query inside the get_ue_metrics for ue_id {ue_id}:', result)  # Debug message 2
         metrics = []
         if result:
             for table in result:
-                print('--------inside for loop DB Manager----table:', table)
+                #print('--------inside for loop DB Manager----table:', table)
                 for record in table.records:
-                    print(f'Record from table: {record}')  # Debug message 3
-                    print('----DB Manager-------record:', record)
-                    print('--------------throughput:', record.values.get('throughput', None))
-                    print('-------------------time:', record.get_time())
+                    #print(f'Record from table: {record}')  # Debug message 3
+                    #print('----DB Manager-------record:', record)
+                    #print('--------------throughput:', record.values.get('throughput', None))
+                    #print('-------------------time:', record.get_time())
                     metrics.append({
                         'timestamp': record.get_time(),
                         'throughput': record.values.get('throughput', None),

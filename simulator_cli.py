@@ -65,7 +65,7 @@ class SimulatorCLI(cmd.Cmd):
         self.gNodeB_manager = gNodeB_manager
         self.cell_manager = cell_manager
         self.sector_manager = sector_manager
-        self.ue_manager = ue_manager  # If UEManager.get_instance() is necessary, make sure it's called correctly
+        self.ue_manager = UEManager.get_instance(base_dir)  # If UEManager.get_instance() is necessary, make sure it's called correctly
         self.network_load_manager = network_load_manager
         self.traffic_controller = TrafficController.get_instance() # # Assuming there's a way to get a TrafficController instance
         self.stop_event = Event()

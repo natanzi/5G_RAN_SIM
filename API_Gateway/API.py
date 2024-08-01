@@ -13,7 +13,7 @@ from logs.logger_config import API_logger
 from network.ue_manager import UEManager
 # Build the path to the .env file in the root directory of your project
 dotenv_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
-
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Load the .env file
 load_dotenv(dotenv_path)
 #print(dotenv_path)
@@ -101,7 +101,7 @@ def ue_metrics():
 
     try:
         # Check if UE exists in the system
-        ue_manager = UEManager.get_instance()
+        ue_manager = UEManager.get_instance(base_dir)
         if not ue_manager.get_ue_by_id(ue_id):
             return jsonify({'error': f"UE {ue_id} not found in the system"}), 404
 
