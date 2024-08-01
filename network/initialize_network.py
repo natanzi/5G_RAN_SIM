@@ -36,6 +36,10 @@ def initialize_network(base_dir, num_ues_to_launch=None):
     gnodeb_manager = gNodeBManager.get_instance(base_dir)
     gNodeBs = gnodeb_manager.initialize_gNodeBs()
 
+    # Add these debug print statements
+    print(f"Type of gNodeBs: {type(gNodeBs)}")
+    print(f"Content of gNodeBs: {gNodeBs}")
+    
     assert gNodeBs is not None and len(gNodeBs) > 0, "gNodeBs initialization failed or returned empty."
     print(f"gNodeBs initialized: {gNodeBs}")
 

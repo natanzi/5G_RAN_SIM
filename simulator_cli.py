@@ -51,7 +51,7 @@ alias_config = {
 
 class SimulatorCLI(cmd.Cmd):
     
-    def __init__(self, base_dir):
+    def __init__(self, *, gNodeB_manager, cell_manager, sector_manager, ue_manager, network_load_manager, base_dir):
         super(SimulatorCLI, self).__init__()  # Correctly call the superclass initializer
         self.session = PromptSession()
         self.traffic_controller = TrafficController.get_instance()

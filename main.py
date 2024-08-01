@@ -26,22 +26,23 @@ from API_Gateway import API
 def run_api(queue):
     def start_api_server():
         print("Starting API server on port 5000...")
-        API.app.run(port=5000, use_reloader=False)  # use_reloader=False to prevent the server from starting twice in debug mode
+        API.app.run(port=5000, use_reloader=False)
 
-    # Start the Flask API server in a separate thread
     api_server_thread = Thread(target=start_api_server)
+    api_server_thread.daemon = True  # Set the thread as daemon
     api_server_thread.start()
 
-    # Handle queue messages
     while True:
-        message = queue.get()  # This will block until an item is available
-        if message == "SHUTDOWN":
-            print("Shutting down API server...")
-            # Implement the logic to properly shutdown the Flask server if needed
-            break
-        # Handle other messages or perform actions based on the queue content
+        try:
+            message = queue.get(timeout=1)  # Add a timeout
+            if message == "SHUTDOWN":
+                print("Shutting down API server...")
+                break
+        except queue.Empty:
+            continue  # Continue the loop if no message is received
 
-    api_server_thread.join()  # Wait for the API server thread to finish
+    # Implement proper shutdown for Flask (if needed)
+    # For example, you might need to call a shutdown function on the API object
 
 def generate_traffic_loop(traffic_controller, ue_list, network_load_manager, network_delay_calculator, db_manager):
     print(f"Debug: inside generate_traffic_loop of main.py ")  # Debugging line
@@ -107,7 +108,10 @@ def main():
     def signal_handler(signum, frame):
         print("Signal received, shutting down gracefully...")
         ipc_queue.put("SHUTDOWN")
-        api_proc.join()
+        api_proc.join(timeout=5)  # Wait for up to 5 seconds
+        if api_proc.is_alive():
+            print("API server didn't shut down gracefully. Terminating.")
+            api_proc.terminate()
         print("API server shutdown complete.")
         traffic_thread.join()
         monitoring_thread.join()

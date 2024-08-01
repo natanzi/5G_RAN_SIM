@@ -356,7 +356,6 @@ def get_ue_info():
         return jsonify({'error': 'An error occurred while retrieving UE info'}), 500
 ###########################################################################################################
 @app.route('/debug/ues', methods=['GET'])
-@app.route('/debug/ues', methods=['GET'])
 def debug_get_all_ues():
     try:
         # Get the instance of UEManager
@@ -374,4 +373,12 @@ def debug_get_all_ues():
         # Log the error and return an error message
         API_logger.error(f"Failed to retrieve UE IDs: {e}")
         return jsonify({'error': 'Failed to retrieve UE IDs'}), 500
+###########################################################################################################
+@app.route('/shutdown', methods=['POST'])
+def shutdown():
+    func = request.environ.get('werkzeug.server.shutdown')
+    if func is None:
+        raise RuntimeError('Not running with the Werkzeug Server')
+    func()
+    return 'Server shutting down...'
 ###########################################################################################################
