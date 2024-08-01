@@ -36,8 +36,16 @@ class UEManager:
 
     @classmethod
     def get_instance(cls, base_dir):
-        if not cls._instance:
-            cls._instance = UEManager(base_dir)
+        with cls._lock:
+            if not cls._instance:
+                ue_logger.debug("Creating a new instance of UEManager.")
+                cls._instance = UEManager(base_dir)
+            elif base_dir and not hasattr(cls._instance, 'base_dir'):
+                ue_logger.debug("Initializing existing instance of UEManager with new base_dir.")
+                cls._instance.initialize(base_dir)
+            else:
+                ue_logger.debug("Returning existing instance of UEManager.")
+            ue_logger.debug(f"UEManager instance: {cls._instance}")
         return cls._instance
 
     def initialize(self, base_dir=None):
@@ -120,6 +128,7 @@ class UEManager:
 
     def list_all_ues(self):
         # Now this will correctly return a list of UE IDs
+        ue_logger.debug(f"Listing all UEs: {self.ues.keys()}")
         return list(self.ues.keys())
 
     def delete_ue(self, ue_id):

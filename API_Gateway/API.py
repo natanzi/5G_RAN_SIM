@@ -359,11 +359,22 @@ def get_ue_info():
 @app.route('/debug/ues', methods=['GET'])
 def debug_get_all_ues():
     try:
+        # Ensure base_dir is defined
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        
+        # Get the instance of UEManager
         ue_manager = UEManager.get_instance(base_dir)
+        
+        # List all UE IDs
         ue_ids = ue_manager.list_all_ues()
+        
+        # Log the retrieved UE IDs
         API_logger.info(f"Retrieved UE IDs: {ue_ids}")
+        
+        # Return the UE IDs as a JSON response
         return jsonify({'ue_ids': ue_ids}), 200
     except Exception as e:
+        # Log the error and return an error message
         API_logger.error(f"Failed to retrieve UE IDs: {e}")
         return jsonify({'error': 'Failed to retrieve UE IDs'}), 500
 ###########################################################################################################
