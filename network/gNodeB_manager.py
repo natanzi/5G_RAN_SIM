@@ -23,12 +23,12 @@ class gNodeBManager:
         return cls._instance
     
     @classmethod
-    def get_instance(cls, db_manager=None):
+    def get_instance(cls, base_dir=None):
         cls._call_count += 1
         gnodeb_logger.debug(f"gNodeBManager get_instance called {cls._call_count} times.")
         with cls._lock:
             if cls._instance is None:
-                cls._instance = cls(db_manager)
+                cls._instance = cls(base_dir)
         return cls._instance
     
     def __init__(self, base_dir):
@@ -38,11 +38,11 @@ class gNodeBManager:
             self.base_dir = base_dir
             self.gNodeBs_config = load_gNodeB_config()
 
-        # Check if gNodeBs_config contains gNodeBs data
-        if 'gNodeBs' not in self.gNodeBs_config or not self.gNodeBs_config['gNodeBs']:
-            gnodeb_logger.error("gNodeBs configuration is missing or empty.")
-            raise ValueError("gNodeBs configuration is missing or empty.")
-        self.initialized = True
+            # Check if gNodeBs_config contains gNodeBs data
+            if 'gNodeBs' not in self.gNodeBs_config or not self.gNodeBs_config['gNodeBs']:
+                gnodeb_logger.error("gNodeBs configuration is missing or empty.")
+                raise ValueError("gNodeBs configuration is missing or empty.")
+            self.initialized = True
 
     def initialize_gNodeBs(self):
         """
