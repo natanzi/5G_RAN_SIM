@@ -30,7 +30,7 @@ class CellManager:
         cell_logger.debug(f"CellManager get_instance called {cls._call_count} times.")
         with cls._lock:
             if cls._instance is None:
-                cls._instance = cls(db_manager)
+                cls._instance = cls(gNodeBs, db_manager)  # Pass both arguments here
         return cls._instance
     
     def __init__(self, gNodeBs, db_manager):
