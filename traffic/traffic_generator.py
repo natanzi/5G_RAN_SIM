@@ -23,13 +23,13 @@ class TrafficController:
     _call_count = 0  # Add a class variable to count calls of the instance
 
     @classmethod
-    def get_instance(cls):
+    def get_instance(cls, base_dir=None):
         cls._call_count += 1
-        ue_logger(f"TrafficController get_instance called {cls._call_count} times.")
+        ue_logger.debug(f"TrafficController get_instance called {cls._call_count} times.")
         with cls._lock:
             if cls._instance is None:
                 ue_logger.debug("Creating a new instance of TrafficController.")
-                cls._instance = cls()
+                cls._instance = cls(base_dir)
             else:
                 ue_logger.debug("Returning existing instance of TrafficController.")
         return cls._instance
@@ -41,10 +41,12 @@ class TrafficController:
                 cls._instance.__initialized = False
             return cls._instance
 
-    def __init__(self):
+    def __init__(self, base_dir=None):
         if self.__initialized: return
         self.__initialized = True
-        self.ue_manager = UEManager.get_instance()  # Removed base_dir parameter
+        if base_dir is None:
+            base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        self.ue_manager = UEManager.get_instance(base_dir)  # Pass base_dir parameter
         self.ues = {}  # Dictionary to track UEs
         self.traffic_logs = []
         self.voice_traffic_params = {'bitrate': (8, 16)}  # in Kbps

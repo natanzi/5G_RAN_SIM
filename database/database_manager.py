@@ -233,19 +233,24 @@ class DatabaseManager:
         self.write_api.write(bucket=self.bucket, record=point)
 ##################################################################################################################################
     def get_ue_metrics(self, ue_id):
-        #print(f"Attempting to fetch UE metrics for ue_id: {ue_id}")  # Debug message 1
+        print(f"Attempting to fetch UE metrics for ue_id: {ue_id}")  # Debug message 1
+
+        # Define the Flux query to retrieve UE metrics from InfluxDB
         query = f'''
             from(bucket: "{self.bucket}")
                 |> range(start: -1d)
                 |> filter(fn: (r) => r._measurement == "ue_metrics" and r.ue_id == "{ue_id}")
-                // Check the output here to ensure fields are present
                 |> pivot(rowKey:["_time"], columnKey: ["_field"], valueColumn: "_value")
-                // Then check the output here to ensure the pivot is as expected
         '''
-        # Execute query
+
+        # Execute the query
         result = self.query_api.query(query=query)
         #print(f'Result of the query inside the get_ue_metrics for ue_id {ue_id}:', result)  # Debug message 2
+
+        # Initialize an empty list to store the metrics
         metrics = []
+
+        # Check if the query returned any results
         if result:
             for table in result:
                 #print('--------inside for loop DB Manager----table:', table)
@@ -254,7 +259,7 @@ class DatabaseManager:
                     #print('----DB Manager-------record:', record)
                     #print('--------------throughput:', record.values.get('throughput', None))
                     #print('-------------------time:', record.get_time())
-                    #Ensure you are safely accessing fields, assuming 'throughput', 'jitter', 'packet_loss', 'delay' might not always be present
+                    # Append the metrics to the list, ensuring safe access to fields
                     metrics.append({
                         'timestamp': record.get_time(),
                         'throughput': record.values.get('throughput', None),
@@ -264,6 +269,8 @@ class DatabaseManager:
                     })
         else:
             print("No results found for the query.")
+
+        # Return the list of metrics
         return metrics
 ##################################################################################################################################
     def get_sector_load(self, sector_id):
