@@ -23,8 +23,12 @@ class TrafficController:
     
     @classmethod
     def get_instance(cls):
-        if cls._instance is None:
-            cls._instance = cls()
+        with cls._lock:
+            if cls._instance is None:
+                ue_logger.debug("Creating a new instance of TrafficController.")
+                cls._instance = cls()
+            else:
+                ue_logger.debug("Returning existing instance of TrafficController.")
         return cls._instance
     
     def __new__(cls, *args, **kwargs):

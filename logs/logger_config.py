@@ -86,7 +86,7 @@ log_files = {
     'cell_logger': 'logs/cell_logger.log',
     'gnodeb_logger': 'logs/gnodeb_logger.log',
     'cell_load_logger': 'logs/cell_load.log',
-    'traffic_update': 'logs/traffic_update_logger.log',
+    'traffic_update_logger': 'logs/traffic_update_logger.log',
     'database_logger': 'logs/database_logger.log',
     'system_resource_logger': 'logs/system_resource.log',
     'server_logger': 'logs/server_logger.log',
