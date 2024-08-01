@@ -83,9 +83,18 @@ def main():
 
     # Network Initialization
     gNodeB_manager = gNodeBManager.get_instance(base_dir=base_dir)
+    print(f"Debug: Before initialize_network")
+    print(f"Debug: gNodeB_manager: {gNodeB_manager}")
+    print(f"Debug: base_dir: {base_dir}")
     gNodeBs, cells, sectors, ues, cell_manager = initialize_network(base_dir, num_ues_to_launch=5)
-    print("Network Initialization Complete")
+    
 
+    # Add these print statements
+    print(f"Debug: After initialize_network")
+    print(f"Debug: gNodeBs: {gNodeBs}")
+    print(f"Debug: cell_manager: {cell_manager}")
+    print("Network Initialization Complete")
+    
     # Additional setup
     sector_manager = SectorManager.get_instance(db_manager=db_manager)
     network_load_manager = NetworkLoadManager.get_instance(cell_manager, sector_manager, gNodeB_manager)
