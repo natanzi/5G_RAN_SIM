@@ -101,7 +101,6 @@ def ue_metrics():
 
     try:
         # Check if UE exists in the system
-        from network.ue_manager import UEManager  # Ensure this import is at the top of your file
         ue_manager = UEManager.get_instance()
         if not ue_manager.get_ue_by_id(ue_id):
             return jsonify({'error': f"UE {ue_id} not found in the system"}), 404
@@ -357,13 +356,11 @@ def get_ue_info():
         return jsonify({'error': 'An error occurred while retrieving UE info'}), 500
 ###########################################################################################################
 @app.route('/debug/ues', methods=['GET'])
+@app.route('/debug/ues', methods=['GET'])
 def debug_get_all_ues():
     try:
-        # Ensure base_dir is defined
-        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        
         # Get the instance of UEManager
-        ue_manager = UEManager.get_instance(base_dir)
+        ue_manager = UEManager.get_instance()
         
         # List all UE IDs
         ue_ids = ue_manager.list_all_ues()

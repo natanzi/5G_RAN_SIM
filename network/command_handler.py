@@ -50,18 +50,17 @@ class CommandHandler:
         if not ue_id.startswith("ue"):
             ue_id = "ue" + ue_id
 
-        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         # Use UEManager to handle UE removal comprehensively
-        ue_manager = UEManager.get_instance(base_dir)
-    
+        ue_manager = UEManager.get_instance()
+        
         # First, check if the UE exists in the system
         if ue_manager.get_ue_by_id(ue_id) is None:
             API_logger.error(f"UE {ue_id} not found in any sector or system")
             return jsonify({'error': f"UE {ue_id} not found in any sector or system"}), 404
-    
+        
         # Proceed with the removal process using UEManager's delete_ue method
         removed = ue_manager.delete_ue(ue_id)
-    
+        
         if removed:
             API_logger.info(f"UE {ue_id} removed successfully.")
             return jsonify({'message': f"UE {ue_id} removed successfully."}), 200
@@ -155,8 +154,7 @@ class CommandHandler:
             ue_id = "ue" + ue_id
 
         # Get an instance of the UEManager to check if the UE exists
-        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))    
-        ue_manager = UEManager.get_instance(base_dir)
+        ue_manager = UEManager.get_instance()
         ue = ue_manager.get_ue_by_id(ue_id)
         if not ue:
             API_logger.error(f"UE {ue_id} not found.")
@@ -233,7 +231,7 @@ class CommandHandler:
 #########################################################################################################
     @staticmethod
     def _get_ue_info(data):
-        ue_id = data['ue_id']
+        ue_id = data['ue_id'].strip().lower()  # Normalize the UE ID to lowercase
         API_logger.info(f"Attempting to retrieve info for UE with ID: {ue_id}")
         
         ue_manager = UEManager.get_instance()
