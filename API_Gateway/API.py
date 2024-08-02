@@ -91,44 +91,30 @@ def del_ue():
 @app.route('/ue_metrics', methods=['GET'])
 def ue_metrics():
     ue_id = request.args.get('ue_id')
-    API_logger.debug(f"Received request for UE metrics with ue_id: {ue_id}")
 
     # Validation for alphanumeric ue_id
     if not ue_id:
-        API_logger.warning("Missing 'ue_id' parameter in request")
         return jsonify({'error': "Missing 'ue_id' parameter"}), 400
     elif not re.match("^[a-zA-Z0-9]+$", ue_id):
-        API_logger.warning(f"Invalid 'ue_id' format: {ue_id}")
         return jsonify({'error': "Invalid 'ue_id' format. 'ue_id' must be alphanumeric."}), 400
 
     try:
+        # Get the base directory
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        
         # Check if UE exists in the system
         from network.ue_manager import UEManager
-        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        API_logger.debug(f"Base directory for UEManager: {base_dir}")
-        
-        ue_manager = UEManager.get_instance(base_dir)
-        API_logger.debug(f"UEManager instance created")
-        
+        ue_manager = UEManager.get_instance(base_dir)  # Provide base_dir here
         if not ue_manager.get_ue_by_id(ue_id):
-            API_logger.warning(f"UE {ue_id} not found in the system")
             return jsonify({'error': f"UE {ue_id} not found in the system"}), 404
 
-        API_logger.debug(f"UE {ue_id} found in the system")
-        
         db_manager = DatabaseManager.get_instance()
-        API_logger.debug(f"DatabaseManager instance created")
-        
         metrics = db_manager.get_ue_metrics(ue_id)
-        API_logger.debug(f"Metrics retrieved for UE {ue_id}: {metrics}")
-        
         if metrics:
             response = jsonify({'metrics': metrics})
             response.headers['Content-Type'] = 'application/json'
-            API_logger.info(f"Successfully retrieved metrics for UE {ue_id}")
             return response, 200
         else:
-            API_logger.warning(f"No metrics found for UE {ue_id}")
             return jsonify({'message': f'No metrics found for UE {ue_id}'}), 404
     except Exception as e:
         API_logger.error(f"An error occurred while retrieving metrics for UE {ue_id}: {e}")
