@@ -1,7 +1,6 @@
 ##########################################################################################
 # API.py is API Gateway of RANFusion and work with command_handler.py and also RANFUsion #
 # Architecture to do some task.                                                          #
-#                                                                                        #
 ##########################################################################################
 from dotenv import load_dotenv
 import os
@@ -60,8 +59,8 @@ def run_api(queue):
     app.run(debug=True, use_reloader=False)  # use_reloader=False is important to not spawn child processes
     
 ######################################################################################################################
-#This is an API for delete one ue from all place!
-@app.route('/del_ue', methods=['POST'])
+# This is an API for deleting one UE from all places
+@app.route('/api/del_ue', methods=['POST'])
 def del_ue():
     data = request.json
     
@@ -88,8 +87,8 @@ def del_ue():
         return jsonify({'error': 'An error occurred while removing UE', 'details': str(e)}), 500
     
 ########################################################################################################################
-#This is an API for get ue metric  like throuput, jitter, packet loss and so on via API from influxDB with json format
-@app.route('/ue_metrics', methods=['GET'])
+# This is an API for getting UE metrics like throughput, jitter, packet loss, and so on via API from InfluxDB in JSON format
+@app.route('/api/ue_metrics', methods=['GET'])
 def ue_metrics():
     ue_id = request.args.get('ue_id')
 
@@ -118,8 +117,8 @@ def ue_metrics():
         return jsonify({'error': 'An error occurred while retrieving metrics'}), 500
 
 ########################################################################################################################
-#This is an API for add a ue instance via API, we should send a jason format of the ue info to add it.
-@app.route('/add_ue', methods=['POST'])
+# This is an API for adding a UE instance via API. We should send a JSON format of the UE info to add it.
+@app.route('/api/add_ue', methods=['POST'])
 def add_ue():
     data = request.json
     
@@ -144,8 +143,8 @@ def add_ue():
         return jsonify({'error': 'An error occurred while adding UE', 'details': str(e)}), 500
 
 #########################################################################################################################
-#This is a API for chnage one or more attribute of the ue instance! for example chnage one parameter but in live network.
-@app.route('/update_ue', methods=['POST'])
+# This is an API for changing one or more attributes of the UE instance. For example, change one parameter in a live network.
+@app.route('/api/update_ue', methods=['POST'])
 def update_ue():
     data = request.json
 
@@ -174,8 +173,8 @@ def update_ue():
         return jsonify({'error': 'An error occurred while updating UE'}), 500
 
 #########################################################################################################
-#This is A API for start the traffic of the each UE
-@app.route('/start_ue_traffic', methods=['POST'])
+# This is an API for starting the traffic of each UE
+@app.route('/api/start_ue_traffic', methods=['POST'])
 def start_ue_traffic():
     data = request.json
     if 'ue_id' not in data:
@@ -190,7 +189,7 @@ def start_ue_traffic():
         return jsonify({'error': message}), 400
 
 #########################################################################################################
-#This is a API for Stop the traffic of the each UE
+# This is an API for stopping the traffic of each UE
 @app.route('/api/stop_ue_traffic', methods=['POST'])
 def stop_ue_traffic():
     data = request.json
@@ -205,9 +204,10 @@ def stop_ue_traffic():
     else:
         API_logger.error(f"An error occurred while stopping UE {data.get('ue_id', 'unknown')}:")
         return jsonify({'error': message}), 400
+
 #########################################################################################################
-# This is an API for get the load of the each sector.
-@app.route('/sector_load', methods=['GET'])
+# This is an API for getting the load of each sector.
+@app.route('/api/sector_load', methods=['GET'])
 def sector_load():
     sector_id = request.args.get('sector_id')
 
@@ -225,9 +225,10 @@ def sector_load():
     except Exception as e:
         API_logger.error(f"An error occurred while retrieving load metrics for sector {sector_id}: {e}")
         return jsonify({'error': 'An error occurred while retrieving load metrics'}), 500
+
 ######################################################################################################### 
-#This is an API for change the traffic pattern
-@app.route('/set_traffic', methods=['POST'])
+# This is an API for changing the traffic pattern
+@app.route('/api/set_traffic', methods=['POST'])
 def set_traffic():
     data = request.json
     API_logger.info(f"Received request to set custom traffic: {data}")
@@ -261,9 +262,10 @@ def set_traffic():
     except Exception as e:
         API_logger.error(f"An error occurred while setting custom traffic: {str(e)}")
         return jsonify({'error': 'An internal error occurred', 'details': str(e)}), 500
+
 #########################################################################################################
-# This is an API for delete all information inside the databse.
-@app.route('/flush_database', methods=['POST'])
+# This is an API for deleting all information inside the database.
+@app.route('/api/flush_database', methods=['POST'])
 def flush_database():
     data = request.get_json()
     if not data or data.get('confirm') != 'yes':
@@ -277,8 +279,9 @@ def flush_database():
     else:
         API_logger.error(f"Database flush failed: {message}")
         return jsonify({'error': message}), 500
+
 #########################################################################################################
-# this API return the list of the current ue in database
+# This API returns the list of the current UEs in the database
 @app.route('/api/ues', methods=['GET'])
 def get_ues():
     try:
@@ -290,32 +293,33 @@ def get_ues():
         return jsonify({'ue_ids': ue_ids}), 200
     except Exception as e:
         # Log the error and return an error message
-        # Make sure to set up logging appropriately
         API_logger.error(f"Failed to retrieve UE IDs: {e}")  
         return jsonify({'error': 'Failed to retrieve UE IDs'}), 500
-#########################################################################################################
-#This is an API for for moving a UE  from one sector, to another place (sector!)
-#@app.route('/move_ue', methods=['POST'])
-#def move_ue():
-    #data = request.get_json()
-    #ue_id = data.get('ue_id')
 
-    # Retrieve UE and validate existence
-    #ue_manager = UEManager.get_instance()
-    #ue = ue_manager.get_ue_by_id(ue_id)
-    #if not ue:
-        #return jsonify({'error': 'UE not found'}), 404
+#########################################################################################################
+# This is an API for moving a UE from one sector to another place (sector)
+# @app.route('/api/move_ue', methods=['POST'])
+# def move_ue():
+#     data = request.get_json()
+#     ue_id = data.get('ue_id')
+
+#     # Retrieve UE and validate existence
+#     ue_manager = UEManager.get_instance()
+#     ue = ue_manager.get_ue_by_id(ue_id)
+#     if not ue:
+#         return jsonify({'error': 'UE not found'}), 404
     
-    # Logic to move UE to new cell (simplified for example)
-    # This would involve more detailed logic to handle sector/gNodeB changes
-    #success = ue_manager.move_ue_to_cell(ue_id,)
+#     # Logic to move UE to new cell (simplified for example)
+#     # This would involve more detailed logic to handle sector/gNodeB changes
+#     success = ue_manager.move_ue_to_cell(ue_id,)
     
-    #if success:
-        #return jsonify({'message': 'UE moved successfully'}), 200
-# else:
-        #return jsonify({'error': 'Failed to move UE'}), 500
+#     if success:
+#         return jsonify({'message': 'UE moved successfully'}), 200
+#     else:
+#         return jsonify({'error': 'Failed to move UE'}), 500
+
 ###########################################################################################################
-@app.route('/set_handover_algorithm', methods=['POST'])
+@app.route('/api/set_handover_algorithm', methods=['POST'])
 def set_handover_algorithm():
     data = request.json
     algorithm_name = data.get('algorithm')
@@ -325,8 +329,9 @@ def set_handover_algorithm():
         LoadBalancer.get_instance().set_handover_algorithm(LoadBalancingHandover())
     # Add more algorithms as needed
     return jsonify({'message': f'Handover algorithm set to {algorithm_name}'}), 200
+
 ###########################################################################################################
-@app.route('/set_mobility_model', methods=['POST'])
+@app.route('/api/set_mobility_model', methods=['POST'])
 def set_mobility_model():
     data = request.json
     model_name = data.get('model')
@@ -337,6 +342,7 @@ def set_mobility_model():
         LoadBalancer.get_instance().set_mobility_model(LinearModel(direction))
     # Add more models as needed
     return jsonify({'message': f'Mobility model set to {model_name}'}), 200
+
 ###########################################################################################################
 @app.route('/api/get_ue_info', methods=['GET'])
 def get_ue_info():
@@ -354,24 +360,9 @@ def get_ue_info():
     except Exception as e:
         API_logger.error(f"An error occurred while retrieving UE info: {e}")
         return jsonify({'error': 'An error occurred while retrieving UE info'}), 500
+
 ###########################################################################################################
-@app.route('/api/ues', methods=['GET'])
-def get_ues():
-    try:
-        # Get the base directory
-        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        # Initialize your UEManager with the base_dir
-        ue_manager = UEManager.get_instance(base_dir)
-        # Fetch UE IDs from the UEManager
-        ue_ids = ue_manager.list_all_ues()
-        # Return the list of UE IDs
-        return jsonify({'ue_ids': ue_ids}), 200
-    except Exception as e:
-        # Log the error and return an error message
-        API_logger.error(f"Failed to retrieve UE IDs: {e}")  
-        return jsonify({'error': 'Failed to retrieve UE IDs'}), 500
-###########################################################################################################
-@app.route('/shutdown', methods=['POST'])
+@app.route('/api/shutdown', methods=['POST'])
 def shutdown():
     func = request.environ.get('werkzeug.server.shutdown')
     if func is None:

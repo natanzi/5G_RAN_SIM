@@ -153,19 +153,19 @@ class DatabaseManager:
             print(f"Failed to close database connection: {e}")
 
     def get_all_ue_ids(self):
-        """Retrieves all UE IDs from InfluxDB."""
+        """Retrieves all unique UE IDs from InfluxDB."""
         try:
             query = f'from(bucket: "{self.bucket}") |> range(start: -1d) |> filter(fn: (r) => r._measurement == "ue_metrics")'
             result = self.query_api.query(query=query, org=INFLUXDB_ORG)
-            ue_ids = []
+            ue_ids = set()  # Use a set to ensure uniqueness
             for table in result:
                 for record in table.records:
                     if 'ue_id' in record.values:
-                        ue_ids.append(record.values['ue_id'])
+                        ue_ids.add(record.values['ue_id'])  # Add to set
         except Exception as e:
             database_logger.error(f"Failed to retrieve UE IDs from InfluxDB: {e}")
             return []  # Return an empty list in case of any exception
-        return ue_ids
+        return sorted(list(ue_ids))  # Convert set to sorted list
 
     def insert_log(self, log_point):
         """Inserts log data into the logs bucket in InfluxDB."""
