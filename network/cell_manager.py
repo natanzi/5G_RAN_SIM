@@ -25,20 +25,25 @@ class CellManager:
 
     @classmethod
     def get_instance(cls, gNodeBs=None, db_manager=None):
-        print(f"Debug for find issue: get_instance called with gNodeBs: {gNodeBs}, db_manager: {db_manager}")
+        print(f"Debug: get_instance called with gNodeBs: {gNodeBs}, db_manager: {db_manager}")
         cls._call_count += 1
         cell_logger.debug(f"CellManager get_instance called {cls._call_count} times.")
-            
+        
         with cls._lock:
             if cls._instance is None:
-                if isinstance(gNodeBs, str):
-                    raise ValueError(f"Invalid gNodeBs parameter: expected dict, got string: {gNodeBs}")
-                cls._instance = cls(gNodeBs, db_manager)  # Pass both arguments here
+                if gNodeBs is None:
+                    raise ValueError("gNodeBs parameter is required when creating the first instance")
+                if not isinstance(gNodeBs, dict):
+                    raise ValueError(f"Invalid gNodeBs parameter: expected dict, got {type(gNodeBs)}")
+                if db_manager is None:
+                    db_manager = DatabaseManager.get_instance()
+                cls._instance = CellManager(gNodeBs, db_manager)
+                cell_logger.info("CellManager instance created.")
             elif gNodeBs is not None or db_manager is not None:
                 cell_logger.warning("CellManager instance already exists. Ignoring new gNodeBs and db_manager.")
             
             return cls._instance
-    
+
     def __init__(self, gNodeBs, db_manager):
         if not hasattr(self, 'initialized'):  # This ensures __init__ is only called once
             print(f"Creating CellManager instance: {self}")

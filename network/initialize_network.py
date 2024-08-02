@@ -43,9 +43,15 @@ def initialize_network(base_dir, num_ues_to_launch=None):
     assert gNodeBs is not None and len(gNodeBs) > 0, "gNodeBs initialization failed or returned empty."
     print(f"gNodeBs initialized: {gNodeBs}")
 
+    print(f"Debug: Before calling CellManager.get_instance")
+    print(f"Debug: gNodeBs type: {type(gNodeBs)}, content: {gNodeBs}")
+    print(f"Debug: db_manager type: {type(db_manager)}, content: {db_manager}")
+
+
     # Initialize Cells using CellManager
     print(f"Calling CellManager.get_instance with gNodeBs: {gNodeBs}, db_manager: {db_manager}")
     cell_manager = CellManager.get_instance(gNodeBs, db_manager)
+    print(f"Debug: After calling CellManager.get_instance")
     cells = cell_manager.initialize_cells(config.cells_config)
 
     assert cells is not None, "Cells initialization failed or returned None."
