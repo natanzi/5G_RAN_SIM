@@ -162,6 +162,7 @@ class DatabaseManager:
                 for record in table.records:
                     if 'ue_id' in record.values:
                         ue_ids.add(record.values['ue_id'])  # Add to set
+            database_logger.info(f"Retrieved UE IDs: {ue_ids}")  # Log the retrieved UE IDs
         except Exception as e:
             database_logger.error(f"Failed to retrieve UE IDs from InfluxDB: {e}")
             return []  # Return an empty list in case of any exception
