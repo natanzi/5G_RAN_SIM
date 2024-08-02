@@ -72,3 +72,6 @@
 {"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "Database connection successful.", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
 {"level": "INFO", "timestamp": "2024-08-02 18:35:27", "message": "Database connection successful.", "test_id": "68991846-10ad-4c5a-9155-3cd34ebea817"}
 {"level": "INFO", "timestamp": "2024-08-02 18:38:35", "message": "Database connection successful.", "test_id": "7d1e71e8-7abc-43dc-a2a3-8509247ae920"}
+{"level": "INFO", "timestamp": "2024-08-02 18:52:23", "message": "Database connection successful.", "test_id": "0bb469d7-0ecd-45db-b2b0-41a666b1cb7a"}
+{"level": "INFO", "timestamp": "2024-08-02 19:22:03", "message": "Database connection successful.", "test_id": "be255f2b-f9f3-44fc-b4a3-7fbc7b1328b1"}
+{"level": "INFO", "timestamp": "2024-08-02 19:22:07", "message": "Retrieved UE IDs: {'ue2', 'ue5', 'ue1', 'ue3', 'ue4'}", "test_id": "0d624838-a7c6-44ab-94bf-57fe0b1b371a"}

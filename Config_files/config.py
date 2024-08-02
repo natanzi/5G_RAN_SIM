@@ -1,53 +1,68 @@
 import os
 import json
+import sys
 
 class Config:
-    def __init__(self, base_dir):
+    _instance = None
+
+    @classmethod
+    def get_instance(cls, base_dir=None):
+        if cls._instance is None:
+            cls._instance = cls(base_dir)
+        return cls._instance
+
+    def __init__(self, base_dir=None):
+        if base_dir is None:
+            base_dir = self.determine_base_dir()
+        
         self.base_dir = base_dir
+        self.config_dir = os.path.join(self.base_dir, 'Config_files')
+        
+        if not os.path.exists(self.config_dir):
+            raise FileNotFoundError(f"Config_files directory not found at {self.config_dir}")
+
         self.gNodeBs_config = self.load_json_config('gNodeB_config.json')
         self.cells_config = self.load_json_config('cell_config.json')
         self.sectors_config = self.load_json_config('sector_config.json')
         self.ue_config = self.load_json_config('ue_config.json')
         self.network_map_data = self.load_or_generate_network_map()
 
+    def determine_base_dir(self):
+        if getattr(sys, 'frozen', False):
+            # If the application is run as a bundle
+            return os.path.dirname(sys.executable)
+        else:
+            # If run from a script
+            return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
     def load_json_config(self, filename):
-        file_path = os.path.join(self.base_dir, 'Config_files', filename)
+        file_path = os.path.join(self.config_dir, filename)
         print(f"Attempting to load config from: {file_path}")  # Debug print
-        with open(file_path, 'r') as file:
-            return json.load(file)
+        try:
+            with open(file_path, 'r') as file:
+                return json.load(file)
+        except FileNotFoundError:
+            print(f"Config file not found: {file_path}")
+            return {}
+        except json.JSONDecodeError:
+            print(f"Error decoding JSON from file: {file_path}")
+            return {}
 
     def load_or_generate_network_map(self):
-        network_map_path = os.path.join(self.base_dir, 'Config_files', 'network_map.json')
+        network_map_path = os.path.join(self.config_dir, 'network_map.json')
         if os.path.exists(network_map_path):
-            with open(network_map_path, 'r') as file:
-                return json.load(file)
+            return self.load_json_config('network_map.json')
         else:
-            # If the network_map.json does not exist, generate and save it
             return self.generate_and_save_network_map()
 
     def generate_and_save_network_map(self):
-        network_map = {
-            "gNodeBs": []
-        }
-        for gnodeb in self.gNodeBs_config['gNodeBs']:
-            gnodeb_entry = {
-                "gNodeBId": gnodeb['gnodeb_id'],
-                "cells": []
-            }
-            associated_cells = [cell for cell in self.cells_config['cells'] if cell['gnodeb_id'] == gnodeb['gnodeb_id']]
-            for cell in associated_cells:
-                sectors_for_cell = [{"sectorId": sector['sector_id']} 
-                                    for sector in self.sectors_config['sectors'] 
-                                    if sector['cell_id'] == cell['cell_id']]
-                cell_entry = {
-                    "cellId": cell['cell_id'],
-                    "sectors": sectors_for_cell
-                }
-                gnodeb_entry["cells"].append(cell_entry)
-            network_map["gNodeBs"].append(gnodeb_entry)
-        
-        # Save the network map to a JSON file in the Config_files directory
-        output_file_path = os.path.join(self.base_dir, 'Config_files', 'network_map.json')
-        with open(output_file_path, 'w') as file:
-            json.dump(network_map, file, indent=2)
-        return network_map
+        # ... (keep your existing implementation)
+        pass
+
+    @property
+    def base_directory(self):
+        return self.base_dir
+
+    @property
+    def config_directory(self):
+        return self.config_dir
