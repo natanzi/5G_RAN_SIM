@@ -45,7 +45,7 @@ def run_api(queue):
     # Implement proper shutdown for Flask (if needed)
     # For example, you might need to call a shutdown function on the API object
 
-def generate_traffic_loop(traffic_controller, ue_list, network_load_manager, network_delay_calculator, db_manager):
+def generate_traffic_loop(traffic_controller, ue_list, network_load_manager, network_delay_calculator, db_manager, cell_manager):
     print(f"Debug: inside generate_traffic_loop of main.py ")  # Debugging line
     while True:
         for ue in ue_list:
@@ -94,7 +94,7 @@ def main():
     print(f"Debug: gNodeBs: {gNodeBs}")
     print(f"Debug: cell_manager: {cell_manager}")
     print("Network Initialization Complete")
-    
+
     # Additional setup
     sector_manager = SectorManager.get_instance(db_manager=db_manager)
     network_load_manager = NetworkLoadManager.get_instance(cell_manager, sector_manager, gNodeB_manager)
@@ -126,7 +126,6 @@ def main():
         traffic_thread.join()
         monitoring_thread.join()
         exit(0)
-
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)
 
