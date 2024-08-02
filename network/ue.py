@@ -141,11 +141,9 @@ class UE:
     
     @classmethod
     def get_ue_instance_by_id(cls, ue_id):
-        ue_id_processed = ue_id.strip().lower()
-        for stored_ue_id, ue_instance in cls.ues.items():  # Use the correct attribute 'ues'
-            if stored_ue_id.lower() == ue_id_processed:
-                return ue_instance
-        return None
+        from network.ue_manager import UEManager
+        ue_manager = UEManager.get_instance()
+        return ue_manager.get_ue_by_id(ue_id)
     
     @classmethod
     def deregister_ue(cls, ue_id):

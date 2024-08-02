@@ -263,3 +263,13 @@
 {"level": "INFO", "timestamp": "2024-08-02 18:10:19", "message": "UE with ID ue3 has been added to the sector Ax1242-A3. Current UE Load count: 1", "test_id": "4ae733bc-0e49-4307-8e74-3582dabd8696"}
 {"level": "INFO", "timestamp": "2024-08-02 18:10:19", "message": "UE with ID ue4 has been added to the sector BX1453-B1. Current UE Load count: 1", "test_id": "4ae733bc-0e49-4307-8e74-3582dabd8696"}
 {"level": "INFO", "timestamp": "2024-08-02 18:10:19", "message": "UE with ID ue5 has been added to the sector BX1453-B2. Current UE Load count: 1", "test_id": "4ae733bc-0e49-4307-8e74-3582dabd8696"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "UE with ID ue1 has been added to the sector Ax1242-A1. Current UE Load count: 1", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "UE with ID ue2 has been added to the sector Ax1242-A2. Current UE Load count: 1", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "UE with ID ue3 has been added to the sector Ax1242-A3. Current UE Load count: 1", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "UE with ID ue4 has been added to the sector BX1453-B1. Current UE Load count: 1", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "UE with ID ue5 has been added to the sector BX1453-B2. Current UE Load count: 1", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "UE with ID ue1 has been added to the sector Ax1242-A1. Current UE Load count: 1", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "UE with ID ue2 has been added to the sector Ax1242-A2. Current UE Load count: 1", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "UE with ID ue3 has been added to the sector Ax1242-A3. Current UE Load count: 1", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "UE with ID ue4 has been added to the sector BX1453-B1. Current UE Load count: 1", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "UE with ID ue5 has been added to the sector BX1453-B2. Current UE Load count: 1", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}

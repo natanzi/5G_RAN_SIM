@@ -2618,3 +2618,38 @@
 {"level": "INFO", "timestamp": "2024-08-02 18:10:24", "message": "Looking for UE with ID: ue1", "test_id": "3faea5a8-ce95-4de7-99a8-34efb92b68b0"}
 {"level": "INFO", "timestamp": "2024-08-02 18:10:24", "message": "Contents of ues dictionary: {}", "test_id": "3faea5a8-ce95-4de7-99a8-34efb92b68b0"}
 {"level": "ERROR", "timestamp": "2024-08-02 18:10:24", "message": "UE with ID ue1 not found.", "test_id": "3faea5a8-ce95-4de7-99a8-34efb92b68b0"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "UE initialized with ID ue1 at 2024-08-02 18:17:59.776944", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "UE initialized with ID ue2 at 2024-08-02 18:17:59.781824", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "UE initialized with ID ue3 at 2024-08-02 18:17:59.787721", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "UE initialized with ID ue4 at 2024-08-02 18:17:59.792578", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "UE initialized with ID ue5 at 2024-08-02 18:17:59.798276", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "Added UE instance with ID: cf757d86-c84c-418f-b97a-f01222353dee to UEManager", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "Added UE instance with ID: cf757d86-c84c-418f-b97a-f01222353dee to UEManager", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "Added UE instance with ID: 30a8fee3-6d7c-463e-82a4-16fb2ffa5be9 to UEManager", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "Added UE instance with ID: 30a8fee3-6d7c-463e-82a4-16fb2ffa5be9 to UEManager", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "Added UE instance with ID: 522306ac-f7f5-431e-bcc6-45773cd6d403 to UEManager", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "Added UE instance with ID: 522306ac-f7f5-431e-bcc6-45773cd6d403 to UEManager", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "Added UE instance with ID: eb57806e-24ad-4b30-b759-fc4d62637fb1 to UEManager", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "Added UE instance with ID: eb57806e-24ad-4b30-b759-fc4d62637fb1 to UEManager", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "Added UE instance with ID: 3e72066e-7dbd-4f11-a1fb-bdf385c13986 to UEManager", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "Added UE instance with ID: 3e72066e-7dbd-4f11-a1fb-bdf385c13986 to UEManager", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:33", "message": "Contents of ues dictionary after initialization: {'ue1': <network.ue.UE object at 0x000001E8A434A790>, 'ue2': <network.ue.UE object at 0x000001E8D44E23D0>, 'ue3': <network.ue.UE object at 0x000001E8D44E3E90>, 'ue4': <network.ue.UE object at 0x000001E8D44D9C50>, 'ue5': <network.ue.UE object at 0x000001E8D44E94D0>}", "test_id": "67c68630-1c7f-48b3-be07-a1f6d4347acc"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:38", "message": "Looking for UE with ID: ue1", "test_id": "2fc4b56a-3045-4153-99ca-7017cac674b9"}
+{"level": "INFO", "timestamp": "2024-08-02 18:17:38", "message": "Contents of ues dictionary: {}", "test_id": "2fc4b56a-3045-4153-99ca-7017cac674b9"}
+{"level": "ERROR", "timestamp": "2024-08-02 18:17:38", "message": "UE with ID ue1 not found.", "test_id": "2fc4b56a-3045-4153-99ca-7017cac674b9"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "UE initialized with ID ue1 at 2024-08-02 18:24:35.104530", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "UE initialized with ID ue2 at 2024-08-02 18:24:35.110196", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "UE initialized with ID ue3 at 2024-08-02 18:24:35.115732", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "UE initialized with ID ue4 at 2024-08-02 18:24:35.121506", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "UE initialized with ID ue5 at 2024-08-02 18:24:35.127610", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "Added UE instance with ID: e4fecdb9-cf11-490c-8e43-cc84463bee29 to UEManager", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "Added UE instance with ID: e4fecdb9-cf11-490c-8e43-cc84463bee29 to UEManager", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "Added UE instance with ID: 9e1de535-869e-4cfb-a91b-57d319f7260b to UEManager", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "Added UE instance with ID: 9e1de535-869e-4cfb-a91b-57d319f7260b to UEManager", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "Added UE instance with ID: d6d0acb2-f975-4431-9e49-3de80724c0ee to UEManager", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "Added UE instance with ID: d6d0acb2-f975-4431-9e49-3de80724c0ee to UEManager", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "Added UE instance with ID: 1205c49a-d4b0-4057-a06a-83de8fba0942 to UEManager", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "Added UE instance with ID: 1205c49a-d4b0-4057-a06a-83de8fba0942 to UEManager", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "Added UE instance with ID: 51a07be2-ddc1-4737-9184-6702903ee0ea to UEManager", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "Added UE instance with ID: 51a07be2-ddc1-4737-9184-6702903ee0ea to UEManager", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}
+{"level": "INFO", "timestamp": "2024-08-02 18:24:12", "message": "Contents of ues dictionary after initialization: {'ue1': <network.ue.UE object at 0x0000023747C55590>, 'ue2': <network.ue.UE object at 0x0000023747C58710>, 'ue3': <network.ue.UE object at 0x0000023747C58450>, 'ue4': <network.ue.UE object at 0x0000023747C59290>, 'ue5': <network.ue.UE object at 0x0000023747C63FD0>}", "test_id": "dcaab653-5423-42aa-979c-25143649d767"}

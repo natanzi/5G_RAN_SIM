@@ -101,14 +101,27 @@ class UEManager:
 
     def get_ue_by_id(self, ue_id):
         ue_id_str = str(ue_id).strip().lower()  # Normalize ue_id to lowercase
-        ue_logger.info(f"Looking for UE with ID: {ue_id_str}")
-        ue_logger.info(f"Contents of ues dictionary: {self.ues}")
-        ue = self.ues.get(ue_id_str)  # Use the correct attribute 'ues' to retrieve the UE
+        ue_logger.debug(f"Looking for UE with ID: {ue_id_str}")
+        ue_logger.debug(f"Contents of ues dictionary: {self.ues}")
+        
+        # Try to get the UE from the ues dictionary
+        ue = self.ues.get(ue_id_str)
+        
+        if ue is None:
+            # If not found, try to get the UE using the static method from UE class
+            ue = UE.get_ue_instance_by_id(ue_id_str)
+        
         if ue is None:
             ue_logger.error(f"UE with ID {ue_id_str} not found.")
         else:
             ue_logger.info(f"Found UE instance: {ue}")
-            ue_logger.info(f"UE instance ID: {id(ue)}")  # Log the object ID
+            ue_logger.debug(f"UE instance ID: {id(ue)}")  # Log the object ID
+            
+            # Ensure the UE is in the ues dictionary
+            if ue_id_str not in self.ues:
+                self.ues[ue_id_str] = ue
+                ue_logger.info(f"Added UE {ue_id_str} to ues dictionary.")
+        
         return ue
 
 
