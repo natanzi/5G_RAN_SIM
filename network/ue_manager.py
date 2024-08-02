@@ -31,6 +31,8 @@ class UEManager:
     def __init__(self, base_dir):
         if not hasattr(self, 'initialized'):  # This ensures __init__ is only called once
             self.config = Config(base_dir)
+            self.base_dir = base_dir
+            self.config_path = os.path.join(self.base_dir, 'Config_files', 'gNodeB_config.json')
             self.ue_config = self.config.ue_config
             self.ues = {}  # Ensure this is a dictionary
             self.initialized = True

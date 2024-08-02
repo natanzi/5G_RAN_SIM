@@ -103,11 +103,11 @@ def ue_metrics():
 
     try:
         # Check if UE exists in the system
-        from network.ue_manager import UEManager  # Ensure this import is at the top of your file
-        base_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'Config_files')
+        from network.ue_manager import UEManager
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         API_logger.debug(f"Base directory for UEManager: {base_dir}")
         
-        ue_manager = UEManager.get_instance(base_dir)  # Pass the base_dir argument
+        ue_manager = UEManager.get_instance(base_dir)
         API_logger.debug(f"UEManager instance created")
         
         if not ue_manager.get_ue_by_id(ue_id):

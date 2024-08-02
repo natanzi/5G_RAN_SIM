@@ -37,9 +37,6 @@ def load_gNodeB_config():
     with open(file_path, 'r') as file:
         return json.load(file)
 
-    with open(file_path, 'r') as file:
-        return json.load(file)
-
 ##Using the function to load the configuration
 gNodeBs_config = load_gNodeB_config()
 

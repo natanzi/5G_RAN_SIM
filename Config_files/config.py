@@ -8,11 +8,11 @@ class Config:
         self.cells_config = self.load_json_config('cell_config.json')
         self.sectors_config = self.load_json_config('sector_config.json')
         self.ue_config = self.load_json_config('ue_config.json')
-        # Load or generate the network map and assign it to the network_map_data attribute
         self.network_map_data = self.load_or_generate_network_map()
 
     def load_json_config(self, filename):
         file_path = os.path.join(self.base_dir, 'Config_files', filename)
+        print(f"Attempting to load config from: {file_path}")  # Debug print
         with open(file_path, 'r') as file:
             return json.load(file)
 
