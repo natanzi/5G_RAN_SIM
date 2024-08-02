@@ -12,3 +12,5 @@
 {"level": "INFO", "timestamp": "2024-07-31 20:58:18", "message": "Retrieved UE IDs: []", "test_id": "8544d568-d22e-4be2-9080-e01ac2990b8f"}
 {"level": "ERROR", "timestamp": "2024-08-01 15:51:48", "message": "Failed to retrieve UE IDs: UEManager.get_instance() missing 1 required positional argument: 'base_dir'", "test_id": "0363f6b4-d6ea-4f80-8434-abb1b839b124"}
 {"level": "ERROR", "timestamp": "2024-08-01 15:51:48", "message": "Failed to retrieve UE IDs: UEManager.get_instance() missing 1 required positional argument: 'base_dir'", "test_id": "0363f6b4-d6ea-4f80-8434-abb1b839b124"}
+{"level": "ERROR", "timestamp": "2024-08-01 21:07:14", "message": "Failed to retrieve UE IDs: UEManager.get_instance() missing 1 required positional argument: 'base_dir'", "test_id": "18ec5a0a-b932-4020-a8c8-351fb3d55d58"}
+{"level": "ERROR", "timestamp": "2024-08-01 21:07:14", "message": "Failed to retrieve UE IDs: UEManager.get_instance() missing 1 required positional argument: 'base_dir'", "test_id": "18ec5a0a-b932-4020-a8c8-351fb3d55d58"}

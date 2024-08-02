@@ -355,23 +355,20 @@ def get_ue_info():
         API_logger.error(f"An error occurred while retrieving UE info: {e}")
         return jsonify({'error': 'An error occurred while retrieving UE info'}), 500
 ###########################################################################################################
-@app.route('/debug/ues', methods=['GET'])
-def debug_get_all_ues():
+@app.route('/api/ues', methods=['GET'])
+def get_ues():
     try:
-        # Get the instance of UEManager
-        ue_manager = UEManager.get_instance()
-        
-        # List all UE IDs
+        # Get the base directory
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        # Initialize your UEManager with the base_dir
+        ue_manager = UEManager.get_instance(base_dir)
+        # Fetch UE IDs from the UEManager
         ue_ids = ue_manager.list_all_ues()
-        
-        # Log the retrieved UE IDs
-        API_logger.info(f"Retrieved UE IDs: {ue_ids}")
-        
-        # Return the UE IDs as a JSON response
+        # Return the list of UE IDs
         return jsonify({'ue_ids': ue_ids}), 200
     except Exception as e:
         # Log the error and return an error message
-        API_logger.error(f"Failed to retrieve UE IDs: {e}")
+        API_logger.error(f"Failed to retrieve UE IDs: {e}")  
         return jsonify({'error': 'Failed to retrieve UE IDs'}), 500
 ###########################################################################################################
 @app.route('/shutdown', methods=['POST'])
