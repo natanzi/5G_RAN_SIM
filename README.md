@@ -77,7 +77,7 @@ Explore RANFusion further in our documentation.(https://RANFusion.com/doc).
 
 To get the list of the all ue:
 ```powershell
-Invoke-RestMethod -Uri 'http://localhost:5000/api/ues' -Method Get
+$response = Invoke-RestMethod -Uri 'http://localhost:5000/api/ues' -Method Get; $response | ConvertTo-Json -Depth 10
 ```
 
 To remove a UE, for example, remove "UE10" :

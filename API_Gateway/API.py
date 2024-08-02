@@ -88,7 +88,7 @@ def del_ue():
     
 ########################################################################################################################
 # This is an API for getting UE metrics like throughput, jitter, packet loss, and so on via API from InfluxDB in JSON format
-@app.route('/api/ue_metrics', methods=['GET'])
+@app.route('/ue_metrics', methods=['GET'])
 def ue_metrics():
     ue_id = request.args.get('ue_id')
 
@@ -99,7 +99,9 @@ def ue_metrics():
         return jsonify({'error': "Invalid 'ue_id' format. 'ue_id' must be alphanumeric."}), 400
 
     try:
-        # Check if UE exists in the system
+        # Provide the correct base_dir argument when getting the UEManager instance
+        from network.ue_manager import UEManager  # Ensure this import is at the top of your file
+        base_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'Config_files')
         ue_manager = UEManager.get_instance(base_dir)
         if not ue_manager.get_ue_by_id(ue_id):
             return jsonify({'error': f"UE {ue_id} not found in the system"}), 404
@@ -289,10 +291,12 @@ def get_ues():
         db_manager = DatabaseManager.get_instance()
         # Fetch UE IDs from the database
         ue_ids = db_manager.get_all_ue_ids()
+        API_logger.info(f"UE IDs to be returned: {ue_ids}")  # Add this line
         # Return the list of UE IDs
         return jsonify({'ue_ids': ue_ids}), 200
     except Exception as e:
         # Log the error and return an error message
+        # Make sure to set up logging appropriately
         API_logger.error(f"Failed to retrieve UE IDs: {e}")  
         return jsonify({'error': 'Failed to retrieve UE IDs'}), 500
 

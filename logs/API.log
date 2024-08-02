@@ -1,16 +1,10 @@
-{"level": "INFO", "timestamp": "2024-07-31 20:36:24", "message": "Retrieved UE IDs: []", "test_id": "aa61b46a-e8f7-4388-8cca-660da3b5ea71"}
-{"level": "INFO", "timestamp": "2024-07-31 20:58:18", "message": "Retrieved UE IDs: []", "test_id": "8544d568-d22e-4be2-9080-e01ac2990b8f"}
-{"level": "INFO", "timestamp": "2024-07-31 20:58:18", "message": "Retrieved UE IDs: []", "test_id": "8544d568-d22e-4be2-9080-e01ac2990b8f"}
-{"level": "INFO", "timestamp": "2024-07-31 20:58:18", "message": "Retrieved UE IDs: []", "test_id": "8544d568-d22e-4be2-9080-e01ac2990b8f"}
-{"level": "INFO", "timestamp": "2024-07-31 20:58:18", "message": "Retrieved UE IDs: []", "test_id": "8544d568-d22e-4be2-9080-e01ac2990b8f"}
-{"level": "INFO", "timestamp": "2024-07-31 20:58:18", "message": "Retrieved UE IDs: []", "test_id": "8544d568-d22e-4be2-9080-e01ac2990b8f"}
-{"level": "INFO", "timestamp": "2024-07-31 20:58:18", "message": "Retrieved UE IDs: []", "test_id": "8544d568-d22e-4be2-9080-e01ac2990b8f"}
-{"level": "INFO", "timestamp": "2024-07-31 20:58:18", "message": "Retrieved UE IDs: []", "test_id": "8544d568-d22e-4be2-9080-e01ac2990b8f"}
-{"level": "INFO", "timestamp": "2024-07-31 20:58:18", "message": "Retrieved UE IDs: []", "test_id": "8544d568-d22e-4be2-9080-e01ac2990b8f"}
-{"level": "INFO", "timestamp": "2024-07-31 20:58:18", "message": "Retrieved UE IDs: []", "test_id": "8544d568-d22e-4be2-9080-e01ac2990b8f"}
-{"level": "INFO", "timestamp": "2024-07-31 20:58:18", "message": "Retrieved UE IDs: []", "test_id": "8544d568-d22e-4be2-9080-e01ac2990b8f"}
-{"level": "INFO", "timestamp": "2024-07-31 20:58:18", "message": "Retrieved UE IDs: []", "test_id": "8544d568-d22e-4be2-9080-e01ac2990b8f"}
-{"level": "ERROR", "timestamp": "2024-08-01 15:51:48", "message": "Failed to retrieve UE IDs: UEManager.get_instance() missing 1 required positional argument: 'base_dir'", "test_id": "0363f6b4-d6ea-4f80-8434-abb1b839b124"}
-{"level": "ERROR", "timestamp": "2024-08-01 15:51:48", "message": "Failed to retrieve UE IDs: UEManager.get_instance() missing 1 required positional argument: 'base_dir'", "test_id": "0363f6b4-d6ea-4f80-8434-abb1b839b124"}
-{"level": "ERROR", "timestamp": "2024-08-01 21:07:14", "message": "Failed to retrieve UE IDs: UEManager.get_instance() missing 1 required positional argument: 'base_dir'", "test_id": "18ec5a0a-b932-4020-a8c8-351fb3d55d58"}
-{"level": "ERROR", "timestamp": "2024-08-01 21:07:14", "message": "Failed to retrieve UE IDs: UEManager.get_instance() missing 1 required positional argument: 'base_dir'", "test_id": "18ec5a0a-b932-4020-a8c8-351fb3d55d58"}
+{"level": "INFO", "timestamp": "2024-08-02 15:48:20", "message": "UE IDs to be returned: ['ue1', 'ue2', 'ue3', 'ue4', 'ue5']", "test_id": "9130650a-9dcc-4f68-a8be-7a0a9189e3a3"}
+{"level": "INFO", "timestamp": "2024-08-02 15:53:13", "message": "UE IDs to be returned: ['ue1', 'ue2', 'ue3', 'ue4', 'ue5']", "test_id": "49f2609b-a350-4fa7-b7a7-5305f3e640d3"}
+{"level": "INFO", "timestamp": "2024-08-02 15:53:13", "message": "UE IDs to be returned: ['ue1', 'ue2', 'ue3', 'ue4', 'ue5']", "test_id": "49f2609b-a350-4fa7-b7a7-5305f3e640d3"}
+{"level": "INFO", "timestamp": "2024-08-02 15:53:13", "message": "UE IDs to be returned: ['ue1', 'ue2', 'ue3', 'ue4', 'ue5']", "test_id": "49f2609b-a350-4fa7-b7a7-5305f3e640d3"}
+{"level": "INFO", "timestamp": "2024-08-02 15:53:13", "message": "UE IDs to be returned: ['ue1', 'ue2', 'ue3', 'ue4', 'ue5']", "test_id": "49f2609b-a350-4fa7-b7a7-5305f3e640d3"}
+{"level": "ERROR", "timestamp": "2024-08-02 16:25:11", "message": "An error occurred while retrieving metrics for UE UE1: UEManager.get_instance() missing 1 required positional argument: 'base_dir'", "test_id": "3ffea3c7-dd61-4b83-bf8f-4d0f0743a353"}
+{"level": "ERROR", "timestamp": "2024-08-02 16:25:11", "message": "An error occurred while retrieving metrics for UE ue1: UEManager.get_instance() missing 1 required positional argument: 'base_dir'", "test_id": "3ffea3c7-dd61-4b83-bf8f-4d0f0743a353"}
+{"level": "ERROR", "timestamp": "2024-08-02 16:35:42", "message": "An error occurred while retrieving metrics for UE UE1: [Errno 2] No such file or directory: '/path/to/base/dir\\\\Config_files\\\\gNodeB_config.json'", "test_id": "8e5a029e-f1a3-40b0-94f6-a290478d55d9"}
+{"level": "ERROR", "timestamp": "2024-08-02 16:43:27", "message": "An error occurred while retrieving metrics for UE UE1: UEManager.get_instance() missing 1 required positional argument: 'base_dir'", "test_id": "db650e7a-ac13-4d18-b7a9-54d38b8fe4b2"}
+{"level": "ERROR", "timestamp": "2024-08-02 16:49:33", "message": "An error occurred while retrieving metrics for UE UE1: [Errno 2] No such file or directory: 'C:\\\\Users\\\\snatanzi\\\\Desktop\\\\vs-code\\\\5G_RAN_SIM\\\\5G_RAN_SIM\\\\5G_RAN_SIM\\\\Config_files\\\\Config_files\\\\gNodeB_config.json'", "test_id": "4c665421-9852-4c15-8f24-e6b77cce8913"}
