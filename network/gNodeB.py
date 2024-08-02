@@ -26,10 +26,16 @@ DEFAULT_BLACKLISTED_CELLS = []
 DEFAULT_MEASUREMENT_BANDWIDTH = 20
 
 def load_gNodeB_config():
-    # Correct the path to point to the 'Config_files' directory
-    # This assumes that 'Config_files' is a direct subdirectory of the base directory where 'main.py' is located
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     file_path = os.path.join(base_dir, 'Config_files', 'gNodeB_config.json')
+    
+    print(f"Attempting to load gNodeB config from: {file_path}")  # Debug print
+    
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"gNodeB config file not found at {file_path}")
+    
+    with open(file_path, 'r') as file:
+        return json.load(file)
 
     with open(file_path, 'r') as file:
         return json.load(file)
