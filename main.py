@@ -104,7 +104,7 @@ def main():
     network_delay_calculator = NetworkDelay()
 
     traffic_controller_instance = TrafficController()
-    traffic_thread = Thread(target=generate_traffic_loop, args=(traffic_controller_instance, ues, network_load_manager, network_delay_calculator, db_manager))
+    traffic_thread = Thread(target=generate_traffic_loop, args=(traffic_controller_instance, ues, network_load_manager, network_delay_calculator, db_manager, cell_manager))
     traffic_thread.start()
 
     monitoring_thread = Thread(target=network_load_manager.monitoring)

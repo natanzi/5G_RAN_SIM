@@ -62,12 +62,11 @@ class SimulatorCLI(cmd.Cmd):
         self.stop_event = threading.Event()
         # Assuming alias_config is defined
         self.aliases = self.generate_alias_mappings(alias_config)
-        self.gNodeB_manager = gNodeBManager.get_instance(base_dir)  # Ensure gNodeBManager instance is retrieved correctly
-        self.cell_manager = CellManager.get_instance(base_dir)  # Ensure CellManager instance is retrieved correctly
-        self.sector_manager = SectorManager.get_instance(base_dir)  # Ensure SectorManager instance is retrieved correctly
-        self.ue_manager = UEManager.get_instance(base_dir)  # If UEManager.get_instance() is necessary, make sure it's called correctly
-        self.network_load_manager = NetworkLoadManager.get_instance(self.cell_manager, self.sector_manager, self.gNodeB_manager)
-        self.traffic_controller = TrafficController.get_instance() # # Assuming there's a way to get a TrafficController instance
+        self.gNodeB_manager = gNodeB_manager
+        self.cell_manager = cell_manager
+        self.sector_manager = sector_manager
+        self.ue_manager = ue_manager
+        self.network_load_manager = network_load_manager
         self.stop_event = Event()
         self.in_kpis_mode = False
 
