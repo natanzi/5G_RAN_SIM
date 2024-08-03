@@ -31,33 +31,17 @@ load_dotenv(dotenv_path)
 # Initialize Flask app
 app = Flask(__name__)
 
+def shutdown_server():
+    func = request.environ.get('werkzeug.server.shutdown')
+    if func is None:
+        raise RuntimeError('Not running with the Werkzeug Server')
+    func()
+    
 # InfluxDB client setup
 INFLUXDB_TOKEN = os.getenv('INFLUXDB_TOKEN')
 INFLUXDB_ORG = os.getenv('INFLUXDB_ORG')
 INFLUXDB_URL = os.getenv('INFLUXDB_URL')
 client = InfluxDBClient(url=INFLUXDB_URL, token=INFLUXDB_TOKEN, org=INFLUXDB_ORG)
-
-# Shutdown function
-def shutdown_server():
-    pid = os.getpid()
-    os.kill(pid, signal.SIGTERM)
-
-@app.route('/api/shutdown', methods=['POST'])
-def shutdown():
-    try:
-        def shutdown_in_5():
-            time.sleep(5)
-            shutdown_server()
-
-        threading.Thread(target=shutdown_in_5).start()
-        return jsonify({"message": "Server will shut down in 5 seconds..."}), 202
-    except Exception as e:
-        return jsonify({"error": f"Failed to initiate shutdown: {str(e)}"}), 500
-
-INFLUXDB_TOKEN = os.getenv('INFLUXDB_TOKEN')
-INFLUXDB_ORG = os.getenv('INFLUXDB_ORG')
-INFLUXDB_URL = os.getenv('INFLUXDB_URL') 
-client = InfluxDBClient(url=INFLUXDB_URL,token=INFLUXDB_TOKEN,org=INFLUXDB_ORG)
 
 def check_for_shutdown_command(queue):
     """
