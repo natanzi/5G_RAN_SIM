@@ -392,12 +392,6 @@ def get_ue_info():
         return jsonify({'error': 'An error occurred while retrieving UE info'}), 500
 
 ###########################################################################################################
-def shutdown_server():
-    # Get the process ID
-    pid = os.getpid()
-    # Send the SIGTERM signal to the process
-    os.kill(pid, signal.SIGTERM)
-
 @app.route('/api/shutdown', methods=['POST'])
 def shutdown():
     try:
