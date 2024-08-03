@@ -198,3 +198,13 @@
 {"level": "INFO", "timestamp": "2024-08-02 18:52:23", "message": "gNodeB 'W2018' has been launched with 3 cells at '2024-08-02 18:52:30'.", "test_id": "0bb469d7-0ecd-45db-b2b0-41a666b1cb7a"}
 {"level": "INFO", "timestamp": "2024-08-02 19:22:03", "message": "gNodeB 'W1140' has been launched with 3 cells at '2024-08-02 19:22:07'.", "test_id": "be255f2b-f9f3-44fc-b4a3-7fbc7b1328b1"}
 {"level": "INFO", "timestamp": "2024-08-02 19:22:03", "message": "gNodeB 'W1320' has been launched with 3 cells at '2024-08-02 19:22:08'.", "test_id": "be255f2b-f9f3-44fc-b4a3-7fbc7b1328b1"}
+{"level": "INFO", "timestamp": "2024-08-02 19:22:03", "message": "gNodeB 'W2018' has been launched with 3 cells at '2024-08-02 19:22:09'.", "test_id": "be255f2b-f9f3-44fc-b4a3-7fbc7b1328b1"}
+{"level": "INFO", "timestamp": "2024-08-02 19:47:56", "message": "gNodeB 'W1140' has been launched with 3 cells at '2024-08-02 19:48:00'.", "test_id": "d6b20a18-528e-46d2-97e4-178046fdbcc4"}
+{"level": "INFO", "timestamp": "2024-08-02 19:47:56", "message": "gNodeB 'W1320' has been launched with 3 cells at '2024-08-02 19:48:02'.", "test_id": "d6b20a18-528e-46d2-97e4-178046fdbcc4"}
+{"level": "INFO", "timestamp": "2024-08-02 19:47:56", "message": "gNodeB 'W2018' has been launched with 3 cells at '2024-08-02 19:48:03'.", "test_id": "d6b20a18-528e-46d2-97e4-178046fdbcc4"}
+{"level": "INFO", "timestamp": "2024-08-02 20:15:39", "message": "gNodeB 'W1140' has been launched with 3 cells at '2024-08-02 20:15:43'.", "test_id": "dc873c48-58d4-452b-8b5f-2b42095770fc"}
+{"level": "INFO", "timestamp": "2024-08-02 20:15:39", "message": "gNodeB 'W1320' has been launched with 3 cells at '2024-08-02 20:15:44'.", "test_id": "dc873c48-58d4-452b-8b5f-2b42095770fc"}
+{"level": "INFO", "timestamp": "2024-08-02 20:15:39", "message": "gNodeB 'W2018' has been launched with 3 cells at '2024-08-02 20:15:45'.", "test_id": "dc873c48-58d4-452b-8b5f-2b42095770fc"}
+{"level": "INFO", "timestamp": "2024-08-02 20:18:03", "message": "gNodeB 'W1140' has been launched with 3 cells at '2024-08-02 20:18:05'.", "test_id": "2d701d51-1f4d-46c6-9c62-1ab748faa6bd"}
+{"level": "INFO", "timestamp": "2024-08-02 20:18:03", "message": "gNodeB 'W1320' has been launched with 3 cells at '2024-08-02 20:18:06'.", "test_id": "2d701d51-1f4d-46c6-9c62-1ab748faa6bd"}
+{"level": "INFO", "timestamp": "2024-08-02 20:18:03", "message": "gNodeB 'W2018' has been launched with 3 cells at '2024-08-02 20:18:07'.", "test_id": "2d701d51-1f4d-46c6-9c62-1ab748faa6bd"}

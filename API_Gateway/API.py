@@ -10,6 +10,9 @@ import threading
 import time
 from logs.logger_config import API_logger
 from network.ue_manager import UEManager
+import os
+import signal
+
 # Build the path to the .env file in the root directory of your project
 dotenv_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -88,7 +91,7 @@ def del_ue():
     
 ########################################################################################################################
 # This is an API for getting UE metrics like throughput, jitter, packet loss, and so on via API from InfluxDB in JSON format
-@app.route('/ue_metrics', methods=['GET'])
+@app.route('/api/ue_metrics', methods=['GET'])
 def ue_metrics():
     ue_id = request.args.get('ue_id')
 
@@ -99,12 +102,9 @@ def ue_metrics():
         return jsonify({'error': "Invalid 'ue_id' format. 'ue_id' must be alphanumeric."}), 400
 
     try:
-        # Get the base directory
-        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        
         # Check if UE exists in the system
         from network.ue_manager import UEManager
-        ue_manager = UEManager.get_instance(base_dir)  # Provide base_dir here
+        ue_manager = UEManager.get_instance()
         if not ue_manager.get_ue_by_id(ue_id):
             return jsonify({'error': f"UE {ue_id} not found in the system"}), 404
 
@@ -118,7 +118,6 @@ def ue_metrics():
             return jsonify({'message': f'No metrics found for UE {ue_id}'}), 404
     except Exception as e:
         API_logger.error(f"An error occurred while retrieving metrics for UE {ue_id}: {e}")
-        API_logger.error(f"Exception traceback: {traceback.format_exc()}")
         return jsonify({'error': 'An error occurred while retrieving metrics'}), 500
 
 ########################################################################################################################
@@ -369,11 +368,23 @@ def get_ue_info():
         return jsonify({'error': 'An error occurred while retrieving UE info'}), 500
 
 ###########################################################################################################
+def shutdown_server():
+    # Get the process ID
+    pid = os.getpid()
+    # Send the SIGTERM signal to the process
+    os.kill(pid, signal.SIGTERM)
+
 @app.route('/api/shutdown', methods=['POST'])
 def shutdown():
-    func = request.environ.get('werkzeug.server.shutdown')
-    if func is None:
-        raise RuntimeError('Not running with the Werkzeug Server')
-    func()
-    return 'Server shutting down...'
+    try:
+        # Schedule the shutdown
+        def shutdown_in_5():
+            time.sleep(5)  # Wait for 5 seconds
+            shutdown_server()
+
+        threading.Thread(target=shutdown_in_5).start()
+        
+        return jsonify({"message": "Server will shut down in 5 seconds..."}), 202
+    except Exception as e:
+        return jsonify({"error": f"Failed to initiate shutdown: {str(e)}"}), 500
 ###########################################################################################################

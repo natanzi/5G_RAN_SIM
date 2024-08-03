@@ -98,9 +98,14 @@ Invoke-RestMethod -Method Post -ContentType "application/json" -Body '{
 }' -Uri http://localhost:5000/update_ue
 ```
 
-To receive a UE metric, for example, "UE10" :
+To receive a UE metric, for example, "ue1" :
 ```powershell
-Invoke-RestMethod -Uri 'http://localhost:5000/ue_metrics?ue_id=10' -Method Get
+Invoke-RestMethod -Uri 'http://localhost:5000/api/ue_metrics?ue_id=ue1' -Method Get
+```
+
+To exit from RANFusion:
+```powershell
+Invoke-RestMethod -Uri 'http://localhost:5000/api/shutdown' -Method Post
 ```
 
 To Remove all information inside the influx db:
