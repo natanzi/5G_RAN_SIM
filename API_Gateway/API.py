@@ -36,7 +36,15 @@ def shutdown_server():
     if func is None:
         raise RuntimeError('Not running with the Werkzeug Server')
     func()
-    
+
+shutdown_flag = False
+
+@app.route('/api/shutdown', methods=['POST'])
+def shutdown():
+    global shutdown_flag
+    shutdown_flag = True
+    return jsonify({"message": "Server will shut down soon..."}), 202
+
 # InfluxDB client setup
 INFLUXDB_TOKEN = os.getenv('INFLUXDB_TOKEN')
 INFLUXDB_ORG = os.getenv('INFLUXDB_ORG')
@@ -376,17 +384,5 @@ def get_ue_info():
         return jsonify({'error': 'An error occurred while retrieving UE info'}), 500
 
 ###########################################################################################################
-@app.route('/api/shutdown', methods=['POST'])
-def shutdown():
-    try:
-        # Schedule the shutdown
-        def shutdown_in_5():
-            time.sleep(5)  # Wait for 5 seconds
-            shutdown_server()
 
-        threading.Thread(target=shutdown_in_5).start()
-        
-        return jsonify({"message": "Server will shut down in 5 seconds..."}), 202
-    except Exception as e:
-        return jsonify({"error": f"Failed to initiate shutdown: {str(e)}"}), 500
 ###########################################################################################################
