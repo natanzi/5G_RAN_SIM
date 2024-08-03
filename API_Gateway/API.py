@@ -2,33 +2,57 @@
 # API.py is API Gateway of RANFusion and work with command_handler.py and also RANFUsion #
 # Architecture to do some task.                                                          #
 ##########################################################################################
-from dotenv import load_dotenv
 import os
 import sys
-from multiprocessing import Queue
 import threading
 import time
-from logs.logger_config import API_logger
-from network.ue_manager import UEManager
-import os
 import signal
-
-# Build the path to the .env file in the root directory of your project
-dotenv_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
-base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# Load the .env file
-load_dotenv(dotenv_path)
-#print(dotenv_path)
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) 
-from network.command_handler import CommandHandler
 import traceback
-from flask import Flask, request, jsonify, Response
-import logging
-from database.database_manager import DatabaseManager
 import re
+from dotenv import load_dotenv
+from multiprocessing import Queue
+from flask import Flask, request, jsonify, Response
 from influxdb_client import InfluxDBClient
 
+# Add parent directory to sys.path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# Import local modules
+from logs.logger_config import API_logger
+from network.ue_manager import UEManager
+from network.command_handler import CommandHandler
+from database.database_manager import DatabaseManager
+
+# Load environment variables
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+dotenv_path = os.path.join(base_dir, '.env')
+load_dotenv(dotenv_path)
+
+# Initialize Flask app
 app = Flask(__name__)
+
+# InfluxDB client setup
+INFLUXDB_TOKEN = os.getenv('INFLUXDB_TOKEN')
+INFLUXDB_ORG = os.getenv('INFLUXDB_ORG')
+INFLUXDB_URL = os.getenv('INFLUXDB_URL')
+client = InfluxDBClient(url=INFLUXDB_URL, token=INFLUXDB_TOKEN, org=INFLUXDB_ORG)
+
+# Shutdown function
+def shutdown_server():
+    pid = os.getpid()
+    os.kill(pid, signal.SIGTERM)
+
+@app.route('/api/shutdown', methods=['POST'])
+def shutdown():
+    try:
+        def shutdown_in_5():
+            time.sleep(5)
+            shutdown_server()
+
+        threading.Thread(target=shutdown_in_5).start()
+        return jsonify({"message": "Server will shut down in 5 seconds..."}), 202
+    except Exception as e:
+        return jsonify({"error": f"Failed to initiate shutdown: {str(e)}"}), 500
 
 INFLUXDB_TOKEN = os.getenv('INFLUXDB_TOKEN')
 INFLUXDB_ORG = os.getenv('INFLUXDB_ORG')
