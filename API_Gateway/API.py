@@ -31,19 +31,14 @@ load_dotenv(dotenv_path)
 # Initialize Flask app
 app = Flask(__name__)
 
-def shutdown_server():
-    func = request.environ.get('werkzeug.server.shutdown')
-    if func is None:
-        raise RuntimeError('Not running with the Werkzeug Server')
-    func()
-
-shutdown_flag = False
-
 @app.route('/api/shutdown', methods=['POST'])
 def shutdown():
     global shutdown_flag
     shutdown_flag = True
     return jsonify({"message": "Server will shut down soon..."}), 202
+
+shutdown_flag = False
+
 
 # InfluxDB client setup
 INFLUXDB_TOKEN = os.getenv('INFLUXDB_TOKEN')

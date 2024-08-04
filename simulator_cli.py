@@ -51,7 +51,7 @@ alias_config = {
 
 class SimulatorCLI(cmd.Cmd):
     
-    def __init__(self, *, gNodeB_manager, cell_manager, sector_manager, ue_manager, network_load_manager, base_dir):
+    def __init__(self, *, gNodeB_manager, cell_manager, sector_manager, ue_manager, network_load_manager, base_dir, shutdown_event):
         super(SimulatorCLI, self).__init__()  # Correctly call the superclass initializer
         self.session = PromptSession()
         self.traffic_controller = TrafficController.get_instance()
@@ -69,6 +69,7 @@ class SimulatorCLI(cmd.Cmd):
         self.network_load_manager = network_load_manager
         self.stop_event = Event()
         self.in_kpis_mode = False
+        self.shutdown_event = shutdown_event
 
         # Setup for prompt_toolkit completion
         commands = [cmd[3:] for cmd in dir(self) if cmd.startswith('do_')]
@@ -629,6 +630,7 @@ class SimulatorCLI(cmd.Cmd):
     def do_exit(self, arg):
         """Exit the simulator."""
         print("Exiting the simulator...")
+        self.shutdown_event.set()
         return True
 #############################################################################################################
     def precmd(self, line):
