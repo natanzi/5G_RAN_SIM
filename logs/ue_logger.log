@@ -2845,3 +2845,511 @@
 {"level": "INFO", "timestamp": "2024-08-04 18:51:07", "message": "Added UE instance with ID: 26e238d8-3a0a-4af2-94a4-6f9a521c6cb8 to UEManager", "test_id": "a9a8b1b6-c487-4116-b094-36ddadd8f99c"}
 {"level": "INFO", "timestamp": "2024-08-04 18:51:07", "message": "Added UE instance with ID: 26e238d8-3a0a-4af2-94a4-6f9a521c6cb8 to UEManager", "test_id": "a9a8b1b6-c487-4116-b094-36ddadd8f99c"}
 {"level": "INFO", "timestamp": "2024-08-04 18:51:07", "message": "Contents of ues dictionary after initialization: {'ue1': <network.ue.UE object at 0x000002456A99E090>, 'ue2': <network.ue.UE object at 0x000002456A9A00D0>, 'ue3': <network.ue.UE object at 0x000002456A9A0290>, 'ue4': <network.ue.UE object at 0x000002456A9A0690>, 'ue5': <network.ue.UE object at 0x000002456A99D790>}", "test_id": "a9a8b1b6-c487-4116-b094-36ddadd8f99c"}
+{"level": "INFO", "timestamp": "2024-08-04 19:00:10", "message": "UE initialized with ID ue1 at 2024-08-04 19:00:36.119899", "test_id": "76320949-fecd-4dc4-8b0d-c7369f4055d5"}
+{"level": "INFO", "timestamp": "2024-08-04 19:00:10", "message": "UE initialized with ID ue2 at 2024-08-04 19:00:36.124694", "test_id": "76320949-fecd-4dc4-8b0d-c7369f4055d5"}
+{"level": "INFO", "timestamp": "2024-08-04 19:00:10", "message": "UE initialized with ID ue3 at 2024-08-04 19:00:36.130420", "test_id": "76320949-fecd-4dc4-8b0d-c7369f4055d5"}
+{"level": "INFO", "timestamp": "2024-08-04 19:00:10", "message": "UE initialized with ID ue4 at 2024-08-04 19:00:36.134347", "test_id": "76320949-fecd-4dc4-8b0d-c7369f4055d5"}
+{"level": "INFO", "timestamp": "2024-08-04 19:00:10", "message": "UE initialized with ID ue5 at 2024-08-04 19:00:36.139427", "test_id": "76320949-fecd-4dc4-8b0d-c7369f4055d5"}
+{"level": "INFO", "timestamp": "2024-08-04 19:00:10", "message": "Added UE instance with ID: 399a89d9-f993-4677-8342-1d387b505301 to UEManager", "test_id": "76320949-fecd-4dc4-8b0d-c7369f4055d5"}
+{"level": "INFO", "timestamp": "2024-08-04 19:00:10", "message": "Added UE instance with ID: 399a89d9-f993-4677-8342-1d387b505301 to UEManager", "test_id": "76320949-fecd-4dc4-8b0d-c7369f4055d5"}
+{"level": "INFO", "timestamp": "2024-08-04 19:00:10", "message": "Added UE instance with ID: a67f1aa3-08a4-451d-a12c-c14154d90254 to UEManager", "test_id": "76320949-fecd-4dc4-8b0d-c7369f4055d5"}
+{"level": "INFO", "timestamp": "2024-08-04 19:00:10", "message": "Added UE instance with ID: a67f1aa3-08a4-451d-a12c-c14154d90254 to UEManager", "test_id": "76320949-fecd-4dc4-8b0d-c7369f4055d5"}
+{"level": "INFO", "timestamp": "2024-08-04 19:00:10", "message": "Added UE instance with ID: 5739f81c-93aa-4c77-913d-5daf2ec31a59 to UEManager", "test_id": "76320949-fecd-4dc4-8b0d-c7369f4055d5"}
+{"level": "INFO", "timestamp": "2024-08-04 19:00:10", "message": "Added UE instance with ID: 5739f81c-93aa-4c77-913d-5daf2ec31a59 to UEManager", "test_id": "76320949-fecd-4dc4-8b0d-c7369f4055d5"}
+{"level": "INFO", "timestamp": "2024-08-04 19:00:10", "message": "Added UE instance with ID: 4ab1d829-2860-463a-a86f-d66e2ac59156 to UEManager", "test_id": "76320949-fecd-4dc4-8b0d-c7369f4055d5"}
+{"level": "INFO", "timestamp": "2024-08-04 19:00:10", "message": "Added UE instance with ID: 4ab1d829-2860-463a-a86f-d66e2ac59156 to UEManager", "test_id": "76320949-fecd-4dc4-8b0d-c7369f4055d5"}
+{"level": "INFO", "timestamp": "2024-08-04 19:00:10", "message": "Added UE instance with ID: fb1bb335-adaf-4f47-97b8-085f47b23342 to UEManager", "test_id": "76320949-fecd-4dc4-8b0d-c7369f4055d5"}
+{"level": "INFO", "timestamp": "2024-08-04 19:00:10", "message": "Added UE instance with ID: fb1bb335-adaf-4f47-97b8-085f47b23342 to UEManager", "test_id": "76320949-fecd-4dc4-8b0d-c7369f4055d5"}
+{"level": "INFO", "timestamp": "2024-08-04 19:00:10", "message": "Contents of ues dictionary after initialization: {'ue1': <network.ue.UE object at 0x000001E67E6A3010>, 'ue2': <network.ue.UE object at 0x000001E61C241050>, 'ue3': <network.ue.UE object at 0x000001E61C2408D0>, 'ue4': <network.ue.UE object at 0x000001E61C240710>, 'ue5': <network.ue.UE object at 0x000001E61C23F1D0>}", "test_id": "76320949-fecd-4dc4-8b0d-c7369f4055d5"}
+{"level": "INFO", "timestamp": "2024-08-04 19:07:10", "message": "UE initialized with ID ue1 at 2024-08-04 19:07:33.479496", "test_id": "8692a818-a1f3-4a2b-b3a8-5381eb72a7b4"}
+{"level": "INFO", "timestamp": "2024-08-04 19:07:10", "message": "UE initialized with ID ue2 at 2024-08-04 19:07:33.485421", "test_id": "8692a818-a1f3-4a2b-b3a8-5381eb72a7b4"}
+{"level": "INFO", "timestamp": "2024-08-04 19:07:10", "message": "UE initialized with ID ue3 at 2024-08-04 19:07:33.489464", "test_id": "8692a818-a1f3-4a2b-b3a8-5381eb72a7b4"}
+{"level": "INFO", "timestamp": "2024-08-04 19:07:10", "message": "UE initialized with ID ue4 at 2024-08-04 19:07:33.495264", "test_id": "8692a818-a1f3-4a2b-b3a8-5381eb72a7b4"}
+{"level": "INFO", "timestamp": "2024-08-04 19:07:10", "message": "UE initialized with ID ue5 at 2024-08-04 19:07:33.499224", "test_id": "8692a818-a1f3-4a2b-b3a8-5381eb72a7b4"}
+{"level": "INFO", "timestamp": "2024-08-04 19:07:10", "message": "Added UE instance with ID: 1476bee6-0ed0-4b50-9285-f4a334502d49 to UEManager", "test_id": "8692a818-a1f3-4a2b-b3a8-5381eb72a7b4"}
+{"level": "INFO", "timestamp": "2024-08-04 19:07:10", "message": "Added UE instance with ID: 1476bee6-0ed0-4b50-9285-f4a334502d49 to UEManager", "test_id": "8692a818-a1f3-4a2b-b3a8-5381eb72a7b4"}
+{"level": "INFO", "timestamp": "2024-08-04 19:07:10", "message": "Added UE instance with ID: a830ca75-3ef5-4daf-abf7-a97893909362 to UEManager", "test_id": "8692a818-a1f3-4a2b-b3a8-5381eb72a7b4"}
+{"level": "INFO", "timestamp": "2024-08-04 19:07:10", "message": "Added UE instance with ID: a830ca75-3ef5-4daf-abf7-a97893909362 to UEManager", "test_id": "8692a818-a1f3-4a2b-b3a8-5381eb72a7b4"}
+{"level": "INFO", "timestamp": "2024-08-04 19:07:10", "message": "Added UE instance with ID: 8b206c9e-7d60-4e6a-86ef-eabfd7496d83 to UEManager", "test_id": "8692a818-a1f3-4a2b-b3a8-5381eb72a7b4"}
+{"level": "INFO", "timestamp": "2024-08-04 19:07:10", "message": "Added UE instance with ID: 8b206c9e-7d60-4e6a-86ef-eabfd7496d83 to UEManager", "test_id": "8692a818-a1f3-4a2b-b3a8-5381eb72a7b4"}
+{"level": "INFO", "timestamp": "2024-08-04 19:07:10", "message": "Added UE instance with ID: 9caa4b84-0121-4768-8819-9f8f5aa37df8 to UEManager", "test_id": "8692a818-a1f3-4a2b-b3a8-5381eb72a7b4"}
+{"level": "INFO", "timestamp": "2024-08-04 19:07:10", "message": "Added UE instance with ID: 9caa4b84-0121-4768-8819-9f8f5aa37df8 to UEManager", "test_id": "8692a818-a1f3-4a2b-b3a8-5381eb72a7b4"}
+{"level": "INFO", "timestamp": "2024-08-04 19:07:10", "message": "Added UE instance with ID: 7373c4d4-41be-40a5-a5cf-fb88248dd914 to UEManager", "test_id": "8692a818-a1f3-4a2b-b3a8-5381eb72a7b4"}
+{"level": "INFO", "timestamp": "2024-08-04 19:07:10", "message": "Added UE instance with ID: 7373c4d4-41be-40a5-a5cf-fb88248dd914 to UEManager", "test_id": "8692a818-a1f3-4a2b-b3a8-5381eb72a7b4"}
+{"level": "INFO", "timestamp": "2024-08-04 19:07:10", "message": "Contents of ues dictionary after initialization: {'ue1': <network.ue.UE object at 0x00000117AA283010>, 'ue2': <network.ue.UE object at 0x00000117DD4F8810>, 'ue3': <network.ue.UE object at 0x00000117DD4F9090>, 'ue4': <network.ue.UE object at 0x00000117DD4F8990>, 'ue5': <network.ue.UE object at 0x00000117DD4FF350>}", "test_id": "8692a818-a1f3-4a2b-b3a8-5381eb72a7b4"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "UE initialized with ID ue1 at 2024-08-04 19:13:02.133335", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "UE initialized with ID ue2 at 2024-08-04 19:13:02.139031", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "UE initialized with ID ue3 at 2024-08-04 19:13:02.142995", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "UE initialized with ID ue4 at 2024-08-04 19:13:02.147866", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "UE initialized with ID ue5 at 2024-08-04 19:13:02.153326", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Added UE instance with ID: bdb02d42-444b-43ff-b38e-ffa042f7500d to UEManager", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Added UE instance with ID: bdb02d42-444b-43ff-b38e-ffa042f7500d to UEManager", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Added UE instance with ID: 6a4d293e-8853-4538-a5b8-afb665c5a573 to UEManager", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Added UE instance with ID: 6a4d293e-8853-4538-a5b8-afb665c5a573 to UEManager", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Added UE instance with ID: 44ebb141-4608-4037-8a03-ff37e7622e0a to UEManager", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Added UE instance with ID: 44ebb141-4608-4037-8a03-ff37e7622e0a to UEManager", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Added UE instance with ID: 2745d860-6210-40c9-ab86-aa4fd28fb483 to UEManager", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Added UE instance with ID: 2745d860-6210-40c9-ab86-aa4fd28fb483 to UEManager", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Added UE instance with ID: 6ed3c9e1-eb69-4152-9baf-29520bef71b4 to UEManager", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Added UE instance with ID: 6ed3c9e1-eb69-4152-9baf-29520bef71b4 to UEManager", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Contents of ues dictionary after initialization: {'ue1': <network.ue.UE object at 0x000001A73B763010>, 'ue2': <network.ue.UE object at 0x000001A76E9BF650>, 'ue3': <network.ue.UE object at 0x000001A76E9BFD10>, 'ue4': <network.ue.UE object at 0x000001A76E9CFB90>, 'ue5': <network.ue.UE object at 0x000001A76E9CFFD0>}", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A73B763010>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BF650>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9BFD10>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFB90>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
+{"level": "INFO", "timestamp": "2024-08-04 19:12:36", "message": "Found UE instance: <network.ue.UE object at 0x000001A76E9CFFD0>", "test_id": "4e428611-55bd-49d7-b9c5-a60a77f2a420"}
