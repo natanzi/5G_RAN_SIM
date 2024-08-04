@@ -23,9 +23,10 @@ from simulator_cli import SimulatorCLI
 from API_Gateway import API
 #Add this global variable at the top of the file
 import threading
+from threading import Event
 shutdown_event = threading.Event()  
 
-def run_api(queue):
+def run_api(queue, shutdown_event):
     def start_api_server():
         print("Starting API server on port 5000...")
         API.app.run(port=5000, use_reloader=False)
@@ -43,7 +44,7 @@ def run_api(queue):
         except Empty:
             continue
 
-def generate_traffic_loop(traffic_controller, ue_list, network_load_manager, network_delay_calculator, db_manager, cell_manager):
+def generate_traffic_loop(traffic_controller, ue_list, network_load_manager, network_delay_calculator, db_manager, cell_manager, shutdown_event):
     logging.debug("Starting traffic generation loop")
     while not shutdown_event.is_set():
         for ue in ue_list:
@@ -80,7 +81,7 @@ def main():
     print(create_logo())
 
     ipc_queue = Queue()
-    api_proc = multiprocessing.Process(target=run_api, args=(ipc_queue, shutdown_event))
+    api_proc = multiprocessing.Process(target=run_api, args=(ipc_queue,))
     api_proc.start()
 
     time.sleep(1)  # Wait for API server to start
@@ -90,20 +91,18 @@ def main():
     except Exception as e:
         logging.error(f"Failed to initialize components: {e}")
         return
-
+    
+    shutdown_event = Event()
     traffic_controller_instance = TrafficController()
-    traffic_thread = Thread(target=generate_traffic_loop, args=(traffic_controller_instance, ues, network_load_manager, network_delay_calculator, db_manager, shutdown_event))
-    traffic_thread.start()
-
-    monitoring_thread = Thread(target=network_load_manager.monitoring, args=(shutdown_event,))
+    traffic_thread = Thread(target=generate_traffic_loop, args=(traffic_controller_instance, ues, network_load_manager, network_delay_calculator, db_manager, cell_manager, shutdown_event))   
+    monitoring_thread = Thread(target=network_load_manager.monitoring)
     monitoring_thread.start()
 
     cli = SimulatorCLI(gNodeB_manager=gNodeB_manager, cell_manager=cell_manager, sector_manager=sector_manager, ue_manager=ue_manager, network_load_manager=network_load_manager, base_dir=base_dir, shutdown_event=shutdown_event)
-
     def signal_handler(signum, frame):
         print("Signal received, shutting down gracefully...")
-        shutdown_event.set()
         logging.info("Signal received, shutting down gracefully...")
+        shutdown_event.set()
         ipc_queue.put("SHUTDOWN")
         api_proc.join(timeout=5)
         if api_proc.is_alive():
@@ -117,16 +116,15 @@ def main():
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)
 
-    cli.cmdloop()
-    
-    # After CLI exits, ensure everything shuts down
-    shutdown_event.set()
-    ipc_queue.put("SHUTDOWN")
-    api_proc.join(timeout=5)
-    if api_proc.is_alive():
-        api_proc.terminate()
-    traffic_thread.join()
-    monitoring_thread.join()
+    cli = SimulatorCLI(
+        gNodeB_manager=gNodeB_manager,
+        cell_manager=cell_manager,
+        sector_manager=sector_manager,
+        ue_manager=ue_manager,
+        network_load_manager=network_load_manager,
+        base_dir=base_dir,
+        shutdown_event=shutdown_event
+    )
 
 if __name__ == "__main__":
     main()
