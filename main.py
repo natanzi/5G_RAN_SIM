@@ -4,7 +4,7 @@ import logging
 import time
 import signal
 import multiprocessing
-from multiprocessing import Queue
+from multiprocessing import Queue, Event
 from threading import Thread
 from queue import Empty
 from Config_files.config import Config
@@ -21,10 +21,6 @@ from logs.logger_config import gnodbe_load_logger, ue_logger
 from network.network_delay import NetworkDelay
 from simulator_cli import SimulatorCLI
 from API_Gateway import API
-#Add this global variable at the top of the file
-import threading
-from threading import Event
-shutdown_event = threading.Event()  
 
 def run_api(queue, shutdown_event):
     def start_api_server():
@@ -80,8 +76,9 @@ def main():
 
     print(create_logo())
 
+    shutdown_event = Event()
     ipc_queue = Queue()
-    api_proc = multiprocessing.Process(target=run_api, args=(ipc_queue,))
+    api_proc = multiprocessing.Process(target=run_api, args=(ipc_queue, shutdown_event))
     api_proc.start()
 
     time.sleep(1)  # Wait for API server to start
@@ -92,13 +89,13 @@ def main():
         logging.error(f"Failed to initialize components: {e}")
         return
     
-    shutdown_event = Event()
     traffic_controller_instance = TrafficController()
-    traffic_thread = Thread(target=generate_traffic_loop, args=(traffic_controller_instance, ues, network_load_manager, network_delay_calculator, db_manager, cell_manager, shutdown_event))   
-    monitoring_thread = Thread(target=network_load_manager.monitoring)
+    traffic_thread = Thread(target=generate_traffic_loop, args=(traffic_controller_instance, ues, network_load_manager, network_delay_calculator, db_manager, cell_manager, shutdown_event))
+    traffic_thread.start()
+
+    monitoring_thread = Thread(target=network_load_manager.monitoring, args=(shutdown_event,))
     monitoring_thread.start()
 
-    cli = SimulatorCLI(gNodeB_manager=gNodeB_manager, cell_manager=cell_manager, sector_manager=sector_manager, ue_manager=ue_manager, network_load_manager=network_load_manager, base_dir=base_dir, shutdown_event=shutdown_event)
     def signal_handler(signum, frame):
         print("Signal received, shutting down gracefully...")
         logging.info("Signal received, shutting down gracefully...")
@@ -125,6 +122,7 @@ def main():
         base_dir=base_dir,
         shutdown_event=shutdown_event
     )
+    cli.cmdloop()
 
 if __name__ == "__main__":
     main()
